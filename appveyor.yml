@@ -1,0 +1,19 @@
+version: '0.0.{build}'
+
+configuration:
+- Debug
+- Release
+
+before_build:
+- appveyor-retry dotnet restore -v Minimal
+
+build_script:
+- dotnet build "Source\BreakingBit.Hitmeister.Core"
+- dotnet build "Source\BreakingBit.Hitmeister.API"
+
+test_script:
+- dotnet test "Source\BreakingBit.Hitmeister.Core.UnitTests"
+- dotnet test "Source\BreakingBit.Hitmeister.API.UnitTests"
+
+cache:
+- '%USERPROFILE%\.nuget\packages'

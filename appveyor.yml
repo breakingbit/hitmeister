@@ -8,12 +8,12 @@ before_build:
 - appveyor-retry dotnet restore -v Minimal
 
 build_script:
-- dotnet build "Source\BreakingBit.Hitmeister.Core"
-- dotnet build "Source\BreakingBit.Hitmeister.API"
+- dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION% --no-dependencies
+- dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION% --no-dependencies
 
 test_script:
-- dotnet test "Source\BreakingBit.Hitmeister.Core.UnitTests"
-- dotnet test "Source\BreakingBit.Hitmeister.API.UnitTests"
+- dotnet test "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION%
+- dotnet test "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION%
 
 cache:
 - '%USERPROFILE%\.nuget\packages'

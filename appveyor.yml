@@ -8,7 +8,8 @@ init:
 
 before_build:
 - choco install opencover.portable
-- choco install codecov
+- "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
+- pip install codecov
 - appveyor-retry dotnet restore
 
 build_script:
@@ -19,8 +20,7 @@ build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
 
 test_script:
-- ps: >-
-    OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]*" -output:coverage.xml -oldstyle
+- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]*" -output:coverage.xml -oldstyle
 
 after_test:
 - codecov -f "coverage.xml"

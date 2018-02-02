@@ -8,6 +8,7 @@ namespace BreakingBit.Hitmeister.Core.UnitTests
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.AreEqual(4, Class1.TestInt);
         }
     }
 }

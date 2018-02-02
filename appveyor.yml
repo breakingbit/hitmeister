@@ -8,7 +8,7 @@ before_build:
 - appveyor-retry dotnet restore -v Minimal
 
 build_script:
-- dotnet build "BreakingBit.Hitmeister" --configuration  %CONFIGURATION%
+- dotnet build .\**\*.csproj
 
 test_script:
 - dotnet test

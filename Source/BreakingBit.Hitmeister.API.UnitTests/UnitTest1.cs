@@ -8,6 +8,8 @@ namespace BreakingBit.Hitmeister.API.UnitTests
         [TestMethod]
         public void TestMethod1()
         {
+            var c0 = new Class0();
+            c0.ImTested();
         }
     }
 }

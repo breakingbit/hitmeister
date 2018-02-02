@@ -1,7 +1,7 @@
 version: '0.0.{build}'
 
 image: Visual Studio 2017
-configuration: Release
+configuration: Debug
 
 init:
   - git config --global core.autocrlf true
@@ -13,7 +13,7 @@ before_build:
 
 build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION%
-- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
+- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c Debug -f netcoreapp2.0 -o bin\test
 
 - dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION%
 - dotnet build "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test

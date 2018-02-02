@@ -24,4 +24,4 @@ test_script:
 
 after_test:
 - OpenCover.Console.exe -register:user -target:"vstest.console.exe" -targetargs:"Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" -filter:"+[UnitTest*]*" -output:.\coverage.xml
-- codecov -f "coverage.xml" -t $(codecov_token)
+- codecov -f "coverage.xml" -t $($env:CODECOV_TOKEN)

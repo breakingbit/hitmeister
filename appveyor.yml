@@ -2,7 +2,7 @@ version: '0.0.{build}'
 
 configuration:
 - Debug
-- Release
+# - Release
 
 before_build:
 - appveyor-retry dotnet restore -v Minimal

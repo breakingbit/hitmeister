@@ -11,9 +11,9 @@ build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION% --no-dependencies
 - dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION% --no-dependencies
 
-test_script:
-- dotnet test "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION%
-- dotnet test "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION%
+test:
+  assemblies:
+  - '**\*.UnitTests.dll'
 
 cache:
 - '%USERPROFILE%\.nuget\packages'

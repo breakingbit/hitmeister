@@ -12,4 +12,4 @@ build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION%
 
 test_script:
-- vstest.console /logger:Appveyor '.\Source\BreakingBit.Hitmeister.Core.UnitTests\obj\%CONFIGURATION%\netcoreapp2.0\BreakingBit.Hitmeister.Core.UnitTests.dll'
+- vstest.console /logger:Appveyor 'Source\BreakingBit.Hitmeister.Core.UnitTests\obj\%CONFIGURATION%\netcoreapp2.0\BreakingBit.Hitmeister.Core.UnitTests.dll'

@@ -9,7 +9,7 @@ before_build:
 
 build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION%
-- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION%
+- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
 
 test_script:
-- vstest.console /logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\obj\Release\netcoreapp2.0\BreakingBit.Hitmeister.Core.UnitTests.dll
+- vstest.console /logger:Appveyor "Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll"

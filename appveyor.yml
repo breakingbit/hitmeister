@@ -20,7 +20,7 @@ build_script:
 
 test_script:
 - ps: >-
-    OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" -output:coverage.xml -oldstyle
+    OpenCover.Console.exe -register:user -target:dotnet "-targetargs:test --logger:Appveyor" -output:coverage.xml -oldstyle
 
 
 after_test:

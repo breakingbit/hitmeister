@@ -7,13 +7,9 @@ configuration:
 before_build:
 - appveyor-retry dotnet restore -v Minimal
 
-build_script:
-- dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION% --no-dependencies
-- dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION% --no-dependencies
-
-test:
-  assemblies:
-  - '**\*.UnitTests.dll'
+build:
+  project: BreakingBit.Hitmeister.sln
+  parallel: true
 
 cache:
 - '%USERPROFILE%\.nuget\packages'

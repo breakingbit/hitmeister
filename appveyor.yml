@@ -7,14 +7,21 @@ init:
   - git config --global core.autocrlf true
 
 before_build:
+- choco install opencover.portable
+- choco install codecov
 - appveyor-retry dotnet restore
 
 build_script:
 - dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION%
 - dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
+
 - dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION%
 - dotnet build "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
 
 test_script:
 - vstest.console /logger:Appveyor "Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll"
 - vstest.console /logger:Appveyor "Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll"
+
+ after_test:
+ - OpenCover.Console.exe -register:user -target:"vstest.console.exe" -targetargs:"Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll" -filter:"+[UnitTest*]*" -output:.\coverage.xml
+ - codecov -f "Threading_coverage.xml" -t $(codecov_token)

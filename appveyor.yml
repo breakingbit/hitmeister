@@ -1,8 +1,5 @@
 version: '0.0.{build}'
 
-os: 
-- Visual Studio 2017
-
 configuration:
 - Debug
 # - Release
@@ -10,9 +7,11 @@ configuration:
 before_build:
 - appveyor-retry dotnet restore -v Minimal
 
-build:
-  project: BreakingBit.Hitmeister.sln
-  parallel: true
+build_script:
+- dotnet build "BreakingBit.Hitmeister" --configuration  %CONFIGURATION%
+
+test_script:
+- dotnet test
 
 cache:
 - '%USERPROFILE%\.nuget\packages'

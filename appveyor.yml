@@ -1,17 +1,15 @@
 version: '0.0.{build}'
 
-configuration:
-- Debug
-# - Release
+image: Visual Studio 2017
+platform: Any CPU
+configuration: Release
 
 before_build:
-- appveyor-retry dotnet restore -v Minimal
+- appveyor-retry dotnet restore
 
 build_script:
-- dotnet build .\**\*.csproj
+- dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION%
+- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION%
 
 test_script:
-- dotnet test
-
-cache:
-- '%USERPROFILE%\.nuget\packages'
+- vstest.console /logger:Appveyor '.\Source\BreakingBit.Hitmeister.Core.UnitTests\obj\%CONFIGURATION%\netcoreapp2.0\BreakingBit.Hitmeister.Core.UnitTests.dll'

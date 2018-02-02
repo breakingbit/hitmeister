@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingBit.Hitmeister.API", "Source\BreakingBit.Hitmeister.API\BreakingBit.Hitmeister.API.csproj", "{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingBit.Hitmeister.API.UnitTests", "Source\BreakingBit.Hitmeister.API.UnitTests\BreakingBit.Hitmeister.API.UnitTests.csproj", "{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingBit.Hitmeister.Core.UnitTests", "Source\BreakingBit.Hitmeister.Core.UnitTests\BreakingBit.Hitmeister.Core.UnitTests.csproj", "{EDCDEEA0-9931-490B-89C2-7BA565B3C450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingBit.Hitmeister.Core", "Source\BreakingBit.Hitmeister.Core\BreakingBit.Hitmeister.Core.csproj", "{35501B64-7F99-40DB-944B-41F9CAC25435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{4F62B24A-6A20-4AD5-AAD9-334B2EF700CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2B822637-FB3A-407C-86C2-2FE102AD82F8}"
+	ProjectSection(SolutionItems) = preProject
+		Source\.editorconfig = Source\.editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCDEEA0-9931-490B-89C2-7BA565B3C450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCDEEA0-9931-490B-89C2-7BA565B3C450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCDEEA0-9931-490B-89C2-7BA565B3C450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCDEEA0-9931-490B-89C2-7BA565B3C450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35501B64-7F99-40DB-944B-41F9CAC25435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35501B64-7F99-40DB-944B-41F9CAC25435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35501B64-7F99-40DB-944B-41F9CAC25435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35501B64-7F99-40DB-944B-41F9CAC25435}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E4DFC58-AF42-4DD8-B7C5-09E9DD4476FE} = {4F62B24A-6A20-4AD5-AAD9-334B2EF700CC}
+		{56CF8B9C-6B88-46DF-B9D2-4540EE1E1791} = {4F62B24A-6A20-4AD5-AAD9-334B2EF700CC}
+		{EDCDEEA0-9931-490B-89C2-7BA565B3C450} = {4F62B24A-6A20-4AD5-AAD9-334B2EF700CC}
+		{35501B64-7F99-40DB-944B-41F9CAC25435} = {4F62B24A-6A20-4AD5-AAD9-334B2EF700CC}
+		{4F62B24A-6A20-4AD5-AAD9-334B2EF700CC} = {2B822637-FB3A-407C-86C2-2FE102AD82F8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68453544-CD75-4964-9E12-A7226B93D9A7}
+	EndGlobalSection
+EndGlobal

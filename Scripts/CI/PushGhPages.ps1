@@ -1,6 +1,7 @@
 $BuildFolder = $env:APPVEYOR_BUILD_FOLDER
+$BranchName = $env:APPVEYOR_REPO_BRANCH
 
-$GHPagesFolder = "$BuildFolder\gh-pages"
+$GHPagesFolder = "$BuildFolder\gh-pages\$BranchName\"
 $GHAccessToken = $env:GithubPersonalAccessToken
 $GHUsername = $env:GithubUsername
 
@@ -18,8 +19,13 @@ git config --global push.default matching
 
 git status
 
-Write-Host "- Cleaning gh-pages folder"
-Get-ChildItem -Attributes !r | Remove-Item -Recurse -Force
+If(Test-Path -Path ".\$BranchName")
+{
+    Write-Host "- Deleting existing branch folder"
+    Remove-Item -Recurse -Force ".\$BranchName"
+}
+Write-Host "- Creating empty branch folder"
+New-Item -ItemType Directory -Force -Path ".\$BranchName"
 
 Pop-Location
 

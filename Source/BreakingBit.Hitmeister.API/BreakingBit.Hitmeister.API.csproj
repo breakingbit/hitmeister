@@ -5,6 +5,17 @@
     
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <Authors>Michael Herwig</Authors>
+    <Company />
+    <Product>Hitmeister API Library</Product>
+    <Copyright>Michael Herwig</Copyright>
+    <PackageProjectUrl>https://breakingbit.github.io/hitmeister/</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/breakingbit/hitmeister/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/breakingbit/hitmeister</RepositoryUrl>
+    <Description>A Library to use the hitmeister api (https://www.real.de/api/v1/)</Description>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

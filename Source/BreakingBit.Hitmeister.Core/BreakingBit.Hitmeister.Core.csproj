@@ -4,6 +4,17 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <Authors>Michael Herwig</Authors>
+    <Company />
+    <Product>Hitmeister Core Library</Product>
+    <Description>Core functionality for all hitmeister libraries.</Description>
+    <Copyright>Michael Herwig</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/breakingbit/hitmeister/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://breakingbit.github.io/hitmeister/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/breakingbit/hitmeister</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>

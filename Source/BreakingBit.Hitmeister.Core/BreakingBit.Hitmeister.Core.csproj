@@ -15,6 +15,7 @@
     <PackageProjectUrl>https://breakingbit.github.io/hitmeister/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/breakingbit/hitmeister</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <Version>$(appveyor_build_version)</Version>
   </PropertyGroup>
 
 </Project>

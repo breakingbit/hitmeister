@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/breakingbit/hitmeister</RepositoryUrl>
     <Description>A Library to use the hitmeister api (https://www.real.de/api/v1/)</Description>
     <RepositoryType>git</RepositoryType>
+    <Version>$(appveyor_build_version)</Version>
   </PropertyGroup>
 
   <ItemGroup>

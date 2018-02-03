@@ -8,6 +8,8 @@ init:
 
 before_build:
 - choco install opencover.portable
+- choco install docfx
+- choco install wkhtmltopdf
 - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
 - pip install codecov
 - appveyor-retry dotnet restore

@@ -3,10 +3,6 @@ version: '0.0.{build}'
 image: Visual Studio 2017
 configuration: Release
 
-nuget:
-  account_feed: true
-  project_feed: true
-
 environment:
   GithubEmail: michael.herwig@hotmail.de
   GithubUsername: michael-herwig
@@ -45,6 +41,9 @@ test_script:
 after_test:
 - SonarQube.Scanner.MSBuild.exe end /d:sonar.login=%SonarQubeAccessToken%
 - ps: ./Scripts/CI/PushGhPages.ps1
+
+artifacts:
+  - path: '**\Release\*.nupkg'
 
 deploy:
 - provider: NuGet

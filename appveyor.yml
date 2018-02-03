@@ -27,6 +27,15 @@ assembly_info:
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
 
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
 before_build:
 - appveyor-retry dotnet restore
 - SonarQube.Scanner.MSBuild.exe begin /k:"Hitmeister" /d:sonar.organization="breakingbit" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%SonarQubeAccessToken% /d:sonar.branch=%APPVEYOR_REPO_BRANCH:#=% /d:sonar.cs.opencover.reportsPaths=coverage_unit.xml

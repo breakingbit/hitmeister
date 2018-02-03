@@ -22,7 +22,7 @@ install:
 
 before_build:
 - appveyor-retry dotnet restore
-- SonarQube.Scanner.MSBuild.exe begin /k:"Hitmeister" /d:sonar.organization="breakingbit" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%SonarQubeAccessToken% /d:sonar.branch=%APPVEYOR_REPO_BRANCH:#=%
+- SonarQube.Scanner.MSBuild.exe begin /k:"Hitmeister" /d:sonar.organization="breakingbit" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%SonarQubeAccessToken% /d:sonar.branch=%APPVEYOR_REPO_BRANCH:#=% /d:sonar.cs.opencover.reportsPaths=coverage_unit.xml
 
 build_script:
 - dotnet build -c %CONFIGURATION% -f %FRAMEWORK%

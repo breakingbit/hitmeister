@@ -10,7 +10,7 @@ environment:
     secure: VYkVbCCsnfqbtR6PYtRtQcrMZtiLeMKw0Uhfjjn0R+IgnKYWRs2FSA7LzEAcnhka
 
 init:
-  - git config --global core.autocrlf true
+  - git config --local core.autocrlf true
 
 before_build:
 - choco install opencover.portable

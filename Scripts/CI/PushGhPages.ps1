@@ -11,6 +11,7 @@ git clone --quiet --branch=gh-pages https://$($GHUsername):$($GHAccessToken)@git
 Set-Location ".\gh-pages"
 
 Write-Host "- Setting local git configuration"
+git config --local core.autocrlf true
 git config --local user.email $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL
 git config --local user.name $GHUsername
 git config --local push.default matching

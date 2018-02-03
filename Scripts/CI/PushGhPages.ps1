@@ -1,41 +1,44 @@
-param([string]$buildFolder, [string]$email, [string]$username, [string]$personalAccessToken)
+$BuildFolder = $env:APPVEYOR_BUILD_FOLDER
 
-Write-Host "- Set config settings...."
-git config --global user.email $email
-git config --global user.name $username
-git config --global push.default matching
+$GHPagesFolder = "$BuildFolder\gh-pages"
+$GHAccessToken = $env:GithubPersonalAccessToken
+$GHUsername = $env:GithubUsername
 
-Write-Host "- Clone gh-pages branch...."
-Push-Location "$($buildFolder)\"
-New-Item -ItemType Directory gh-pages
-git clone --quiet --branch=gh-pages https://$($username):$($personalAccessToken)@github.com/breakingbit/hitmeister.git .\gh-pages\
+Push-Location $BuildFolder
+
+Write-Host "- Cloning gh-pages branch"
+git clone --quiet --branch=gh-pages https://$($GHUsername):$($GHAccessToken)@github.com/$($env:APPVEYOR_REPO_NAME).git .\gh-pages\
 Set-Location ".\gh-pages"
+
+Write-Host "- Setting local git configuration"
+git config --local user.email $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL
+git config --local user.name $GHUsername
+git config --local push.default matching
+
 git status
 
-Write-Host "- Clean gh-pages folder...."
+Write-Host "- Cleaning gh-pages folder"
 Get-ChildItem -Attributes !r | Remove-Item -Recurse -Force
 
 Pop-Location
 
-Write-Host "- Copy contents of static-site folder into gh-pages folder...."
-Copy-Item -Path .\Documentation\_site\* -Destination "$($buildFolder)\gh-pages" -Recurse
+Write-Host "- Copying documentation"
+Copy-Item -Path .\Documentation\_site\* -Destination $GHPagesFolder -Recurse
 
-Push-Location "$($buildFolder)\gh-pages"
-git status
+Push-Location $GHPagesFolder
 
-$thereAreChanges = git status | select-string -pattern "Changes not staged for commit:","Untracked files:" -simplematch
-if ($thereAreChanges -ne $null) { 
-    Write-host "- Committing changes to documentation..."
+$hasPendingChanges = git status | select-string -pattern "Changes not staged for commit:","Untracked files:" -simplematch
+if ($hasPendingChanges -ne $null) { 
+    Write-host "- Committing changes"
     git add --all
     git status
-    git commit -m "CI Documentation Generation"
+    git commit -m "CI Documentation Generation ($($env:APPVEYOR_REPO_COMMIT))"
     git status
-    Write-Host "- Push it...."
+    Write-Host "- Pushing changes"
     git push --quiet
-    Write-Host "- Pushed it good!"
 } 
 else { 
-    Write-Host "- No changes to documentation to commit"
+    Write-Host "- No changes to commit"
 }
 
 Pop-Location

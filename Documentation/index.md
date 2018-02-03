@@ -1,1 +1,1 @@
-# Welcome to **BreakingBit.Hitmeister**
+# Welcome to BreakingBit.Hitmeister

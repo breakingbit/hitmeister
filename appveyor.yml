@@ -3,6 +3,12 @@ version: '0.0.{build}'
 image: Visual Studio 2017
 configuration: Debug
 
+environment:
+  GithubEmail: michael.herwig@hotmail.de
+  GithubUsername: michael-herwig
+  GithubPersonalAccessToken:
+    secure: VYkVbCCsnfqbtR6PYtRtQcrMZtiLeMKw0Uhfjjn0R+IgnKYWRs2FSA7LzEAcnhka
+
 init:
   - git config --global core.autocrlf true
 
@@ -26,3 +32,4 @@ test_script:
 
 after_test:
 - codecov -f "coverage.xml"
+- ps: ./Scripts/CI/PushGhPages.ps1 $env:APPVEYOR_BUILD_FOLDER $env:GithubEmail $env:GithubUsername $env:GithubPersonalAccessToken

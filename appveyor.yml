@@ -1,0 +1,70 @@
+version: '0.0.{build}'
+
+branches:
+  only:
+  - master
+  - develop
+
+image: Visual Studio 2017
+configuration: Release
+
+environment:
+  GithubEmail: michael.herwig@hotmail.de
+  GithubUsername: michael-herwig
+  GithubPersonalAccessToken:
+    secure: VYkVbCCsnfqbtR6PYtRtQcrMZtiLeMKw0Uhfjjn0R+IgnKYWRs2FSA7LzEAcnhka
+  SonarQubeAccessToken:
+    secure: 5wNab+zPWl30NBO72SsNBTiUPDrzKHKJSUdj1vI+2GE5eLBNIgQT9qTUYCiX0CfJ
+  framework: netcoreapp2.0
+
+init:
+  - git config --global core.autocrlf true
+
+install:
+- choco install opencover.portable
+- choco install docfx
+- choco install "msbuild-sonarqube-runner"
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
+before_build:
+- appveyor-retry dotnet restore
+- SonarQube.Scanner.MSBuild.exe begin /k:"Hitmeister" /d:sonar.organization="breakingbit" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%SonarQubeAccessToken% /d:sonar.branch=%APPVEYOR_REPO_BRANCH:#=% /d:sonar.cs.opencover.reportsPaths=coverage_unit.xml
+
+build_script:
+- dotnet build -c %CONFIGURATION% -f %FRAMEWORK%
+- docfx ./Documentation/docfx.json --build
+
+test_script:
+- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]* -[BreakingBit.Hitmeister.*.UnitTests*]*" -output:coverage_unit.xml -oldstyle
+
+after_test:
+- SonarQube.Scanner.MSBuild.exe end /d:sonar.login=%SonarQubeAccessToken%
+- ps: ./Scripts/CI/PushGhPages.ps1
+
+artifacts:
+  - path: '**\Release\*.nupkg'
+
+deploy:
+- provider: NuGet
+  api_key:
+    secure: qPfTVGX5JjkNdS9BPDG7z75WYv+N91mu+h6n8F2KDSd9Rft30/skPr+ruK01RVo3
+  skip_symbols: false
+  artifact: /.*\.nupkg/
+  on:
+    branch: master
+    configuration: Release

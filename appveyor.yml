@@ -1,36 +1,36 @@
 version: '0.0.{build}'
 
 image: Visual Studio 2017
-configuration: Debug
+configuration: Release
 
 environment:
   GithubEmail: michael.herwig@hotmail.de
   GithubUsername: michael-herwig
   GithubPersonalAccessToken:
     secure: VYkVbCCsnfqbtR6PYtRtQcrMZtiLeMKw0Uhfjjn0R+IgnKYWRs2FSA7LzEAcnhka
+  SonarQubeAccessToken:
+    secure: 5wNab+zPWl30NBO72SsNBTiUPDrzKHKJSUdj1vI+2GE5eLBNIgQT9qTUYCiX0CfJ
+  framework: netcoreapp2.0
 
 init:
-  - git config --local core.autocrlf true
+  - git config --global core.autocrlf true
 
-before_build:
+install:
 - choco install opencover.portable
 - choco install docfx
-- choco install wkhtmltopdf
-- "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
-- pip install codecov
+- choco install "msbuild-sonarqube-runner"
+
+before_build:
 - appveyor-retry dotnet restore
+- SonarQube.Scanner.MSBuild.exe begin /k:"Hitmeister" /d:sonar.organization="breakingbit" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%SonarQubeAccessToken% /d:sonar.branch=%APPVEYOR_REPO_BRANCH%
 
 build_script:
-- dotnet build "Source\BreakingBit.Hitmeister.Core" -c %CONFIGURATION%
-- dotnet build "Source\BreakingBit.Hitmeister.Core.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
-
-- dotnet build "Source\BreakingBit.Hitmeister.API" -c %CONFIGURATION%
-- dotnet build "Source\BreakingBit.Hitmeister.API.UnitTests" -c %CONFIGURATION% -f netcoreapp2.0 -o bin\test
+- dotnet build -c %CONFIGURATION% -f %FRAMEWORK%
+- docfx ./Documentation/docfx.json --build
 
 test_script:
-- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]* -[BreakingBit.Hitmeister.*.UnitTests*]*" -output:coverage.xml -oldstyle
+- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\test\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\test\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]* -[BreakingBit.Hitmeister.*.UnitTests*]*" -output:coverage_unit.xml -oldstyle
 
 after_test:
-- codecov -f "coverage.xml"
-- docfx ./Documentation/docfx.json --build
+- SonarQube.Scanner.MSBuild.exe end /d:sonar.login=%SonarQubeAccessToken%
 - ps: ./Scripts/CI/PushGhPages.ps1

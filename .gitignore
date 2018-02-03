@@ -22,6 +22,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+# SonarQube
+.sonarqube/
+
 # Visual Studio Code cache/option directory
 .vscode/
 

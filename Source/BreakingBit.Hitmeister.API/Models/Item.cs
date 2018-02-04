@@ -38,9 +38,9 @@ namespace BreakingBit.Hitmeister.API.Models
         public int CategoryIdentifier { get; set; }
 
         /// <summary>
-        /// URL of the main picture for this item.
+        /// Url of the main picture for this item.
         /// </summary>
-        /// <value>Items main picture url./value>
+        /// <value>Items main picture url</value>
         [JsonProperty("main_picture", Required = Required.Always)]
         public Uri MainPictureUrl { get; set; }
 

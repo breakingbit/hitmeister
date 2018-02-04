@@ -11,7 +11,7 @@ namespace BreakingBit.Hitmeister.Core.Extensions
         /// <summary>
         /// Counts the number of digits <paramref name="number"/> required in a decimal system
         /// </summary>
-        /// <param name="number"></param>
+        /// <param name="number">The number value for counting its digits.</param>
         /// <returns>number of digets required in a decimal system</returns>
         public static uint CountDigits(this ulong number) =>
             (uint)Math.Floor(Math.Log10(number) + 1);

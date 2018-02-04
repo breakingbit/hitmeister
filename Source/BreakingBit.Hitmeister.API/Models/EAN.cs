@@ -199,7 +199,7 @@ namespace BreakingBit.Hitmeister.API.Models
         /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
         /// <returns>
         /// true if the <see cref="Number"/> of <paramref name="ean1"/> is the same as the 
-        /// <see cref="Numer"/> of <paramref name="ean2"/>
+        /// <see cref="Number"/> of <paramref name="ean2"/>
         /// </returns>
         public static bool operator ==(EAN ean1, EAN ean2) =>
             EqualityComparer<EAN>.Default.Equals(ean1, ean2);
@@ -211,7 +211,7 @@ namespace BreakingBit.Hitmeister.API.Models
         /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
         /// <returns>
         /// true if the <see cref="Number"/> of <paramref name="ean1"/> is different from the
-        /// <see cref="Numer"/> of <paramref name="ean2"/>
+        /// <see cref="Number"/> of <paramref name="ean2"/>
         /// </returns>
         public static bool operator !=(EAN ean1, EAN ean2) =>
             !(ean1 == ean2);

@@ -215,5 +215,15 @@ namespace BreakingBit.Hitmeister.API.Models
         public static bool operator !=(EAN ean1, EAN ean2) =>
             !(ean1 == ean2);
         #endregion
+
+        #region ToString Conversion
+        /// <summary>
+        /// Converts the article number to its string representation with leading zeros
+        /// based on its <see cref="Type"/> property.
+        /// </summary>
+        /// <returns>A string representation conforming to the underlying norm.</returns>
+        public override string ToString() =>
+            Number.ToString($"D{(uint)Type}");
+        #endregion
     }
 }

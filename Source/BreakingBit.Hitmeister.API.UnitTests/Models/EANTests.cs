@@ -134,5 +134,14 @@ namespace BreakingBit.Hitmeister.API.UnitTests.Models
             var ean2 = new EAN(ean1.Number, EANType.GTIN_14);
             Assert.AreEqual(ean1.GetHashCode(), ean2.GetHashCode());
         }
+
+        [TestMethod]
+        public void ToStringConformsToNorm()
+        {
+            var ean = new EAN(100, EANType.GTIN_13);
+            Assert.AreEqual(ean.ToString(), new string('0', 13 - 3) + ean.Number);
+            ean = new EAN(49182, EANType.GTIN_14);
+            Assert.AreEqual(ean.ToString(), new string('0', 14 - 5) + ean.Number);
+        }
     }
 }

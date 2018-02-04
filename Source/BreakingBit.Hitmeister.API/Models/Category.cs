@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BreakingBit.Hitmeister.API.Model
+namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
     /// Tree structure for organizing items into categories with shared data or data requirements 
@@ -12,7 +12,7 @@ namespace BreakingBit.Hitmeister.API.Model
     /// the tree. At the top level of the tree we have the root category, which is guaranteed to 
     /// have an Identifier = 1.
     /// </remarks>
-    public sealed class Category
+    public class Category
     {
 
         /// <summary>

@@ -112,168 +112,168 @@ namespace BreakingBit.Hitmeister.API.Models
         /// Quantity: Euro; Unit: EUR/100
         /// </summary>
         [EnumMember(Value = "Si_Eurocent")]
-        SiEurocent,
+        Eurocent,
 
         /// <summary>
         /// Quantity: Electric Current; Unit = A
         /// </summary>
         [EnumMember(Value = "Si_Ampere")]
-        SiAmpere,
+        Ampere,
 
         /// <summary>
         /// Quantity: Electric Charge; Unit = Ah
         /// </summary>
         [EnumMember(Value = "Si_AmpereHour")]
-        SiAmpereHour,
+        AmpereHour,
 
         /// <summary>
         /// Quantity: Pressure; Unit = 100000Pa
         /// </summary>
         [EnumMember(Value = "Si_Bar")]
-        SiBar,
+        Bar,
 
         /// <summary>
         /// The ratio of power and amplitude, mostly known as (deci)bel
         /// </summary>
         [EnumMember(Value = "Si_Bel")]
-        SiBel,
+        Bel,
 
         /// <summary>
         /// Quantity: Computer Memory; Unit: 1B=8bit
         /// </summary>
         [EnumMember(Value = "Si_Byte")]
-        SiByte,
+        Byte,
 
         /// <summary>
         /// Quantity: Volume; Unit: m^3
         /// </summary>
         [EnumMember(Value = "Si_CubicMeter")]
-        SiCubicMeter,
+        CubicMeter,
 
         /// <summary>
         /// Quantity: Flow Rate; Unit: m^3/h
         /// </summary>
         [EnumMember(Value = "Si_CubicMeterPerHour")]
-        SiCubicMeterPerHour,
+        CubicMeterPerHour,
 
         /// <summary>
         /// Quantity: Temperature; Unit: 273.15K
         /// </summary>
         [EnumMember(Value = "Si_DegreeCelsius")]
-        SiDegreeCelsius,
+        DegreeCelsius,
 
         /// <summary>
         /// Quantity: Frequency; Unit: hz=s^-1
         /// </summary>
         [EnumMember(Value = "Si_Herz")]
-        SiHerz,
+        Herz,
 
         /// <summary>
         /// Quantity: Power; Unit: 735,499W
         /// </summary>
         [EnumMember(Value = "Si_HorsePower")]
-        SiHorsePower,
+        HorsePower,
 
         /// <summary>
         /// Quantity: Length; Unit: 0,0254m
         /// </summary>
         [EnumMember(Value = "Si_Inch")]
-        SiInch,
+        Inch,
 
         /// <summary>
         /// Quantity: Temperature; Unit: K
         /// </summary>
         [EnumMember(Value = "Si_Kelvin")]
-        SiKelvin,
+        Kelvin,
 
         /// <summary>
         /// Quantity: Mass; Unit: kg
         /// </summary>
         [EnumMember(Value = "Si_Kilogram")]
-        SiKilogram,
+        Kilogram,
 
         /// <summary>
         /// Quantity: Area Density; Unit: m^-2/kg
         /// </summary>
         [EnumMember(Value = "Si_KilogramPerSquareMeter")]
-        SiKilogramPerSquareMeter,
+        KilogramPerSquareMeter,
 
         /// <summary>
         /// Quantity: Volume; Unit: 0,001m^3
         /// </summary>
         [EnumMember(Value = "Si_Litre")]
-        SiLitre,
+        Litre,
 
         /// <summary>
         /// Enum SiLitrePerHour for "Si_LitrePerHour"
         /// </summary>
         [EnumMember(Value = "Si_LitrePerHour")]
-        SiLitrePerHour,
+        LitrePerHour,
 
         /// <summary>
         /// Quantity: Lumen; Unit: cd
         /// </summary>
         [EnumMember(Value = "Si_Lumen")]
-        SiLumen,
+        Lumen,
 
         /// <summary>
         /// Quantity: Length; Unit: m
         /// </summary>
         [EnumMember(Value = "Si_Meter")]
-        SiMeter,
+        Meter,
 
         /// <summary>
         /// Quantity: Mass; Unit: 0,0283495231kg
         /// </summary>
         [EnumMember(Value = "Si_Ounce")]
-        SiOunce,
+        Ounce,
 
         /// <summary>
         /// Quantity: Percent; Unit: 1/100
         /// </summary>
         [EnumMember(Value = "Si_Percent")]
-        SiPercent,
+        Percent,
 
         /// <summary>
         /// Quantity: Pixel; Unit: px
         /// </summary>
         [EnumMember(Value = "Si_Pixel")]
-        SiPixel,
+        Pixel,
 
         /// <summary>
         /// Quantity: RPM; Unit: (60s)^-1
         /// </summary>
         [EnumMember(Value = "Si_RoundsPerMinute")]
-        SiRoundsPerMinute,
+        RoundsPerMinute,
 
         /// <summary>
         /// Quantity: Second; Unit: s
         /// </summary>
         [EnumMember(Value = "Si_Second")]
-        SiSecond,
+        Second,
 
         /// <summary>
         /// Quantity: Area; Unit: m^2
         /// </summary>
         [EnumMember(Value = "Si_SquareMeter")]
-        SiSquareMeter,
+        SquareMeter,
 
         /// <summary>
         /// Quantity: Voltage; Unit: W/A
         /// </summary>
         [EnumMember(Value = "Si_Volt")]
-        SiVolt,
+        Volt,
 
         /// <summary>
         /// Quantity: Volume; Unit: m^3/100
         /// </summary>
         [EnumMember(Value = "Si_VolumePercent")]
-        SiVolumePercent,
+        VolumePercent,
 
         /// <summary>
         /// Quantity: Power; Unit: W
         /// </summary>
         [EnumMember(Value = "Si_Watt")]
-        SiWatt
+        Watt
     }
 }

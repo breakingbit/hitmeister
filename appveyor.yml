@@ -50,7 +50,7 @@ build_script:
 - docfx ./Documentation/docfx.json --build
 
 test_script:
-- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]* -[BreakingBit.Hitmeister.*.UnitTests*]*" -output:coverage_unit.xml -oldstyle
+- OpenCover.Console.exe -register:user -target:VsTest.Console.exe "-targetargs:/Logger:Appveyor Source\BreakingBit.Hitmeister.Core.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.Core.UnitTests.dll Source\BreakingBit.Hitmeister.API.UnitTests\bin\%CONFIGURATION%\%FRAMEWORK%\BreakingBit.Hitmeister.API.UnitTests.dll" "-filter:+[BreakingBit.Hitmeister*]*" -output:coverage_unit.xml -oldstyle
 
 after_test:
 - SonarQube.Scanner.MSBuild.exe end /d:sonar.login=%SonarQubeAccessToken%

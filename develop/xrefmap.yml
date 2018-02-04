@@ -1,63 +1,249 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: BreakingBit.Hitmeister.API
-  name: BreakingBit.Hitmeister.API
-  href: api/BreakingBit.Hitmeister.API.html
-  commentId: N:BreakingBit.Hitmeister.API
-  fullName: BreakingBit.Hitmeister.API
-  nameWithType: BreakingBit.Hitmeister.API
-- uid: BreakingBit.Hitmeister.API.Class0
-  name: Class0
-  href: api/BreakingBit.Hitmeister.API.Class0.html
-  commentId: T:BreakingBit.Hitmeister.API.Class0
-  fullName: BreakingBit.Hitmeister.API.Class0
-  nameWithType: Class0
-- uid: BreakingBit.Hitmeister.API.Class0.ImTested
-  name: ImTested()
-  href: api/BreakingBit.Hitmeister.API.Class0.html#BreakingBit_Hitmeister_API_Class0_ImTested
-  commentId: M:BreakingBit.Hitmeister.API.Class0.ImTested
-  fullName: BreakingBit.Hitmeister.API.Class0.ImTested()
-  nameWithType: Class0.ImTested()
-- uid: BreakingBit.Hitmeister.API.Class0.ImTested*
-  name: ImTested
-  href: api/BreakingBit.Hitmeister.API.Class0.html#BreakingBit_Hitmeister_API_Class0_ImTested_
-  commentId: Overload:BreakingBit.Hitmeister.API.Class0.ImTested
-  fullName: BreakingBit.Hitmeister.API.Class0.ImTested
-  nameWithType: Class0.ImTested
-- uid: BreakingBit.Hitmeister.API.Class1
-  name: Class1
-  href: api/BreakingBit.Hitmeister.API.Class1.html
-  commentId: T:BreakingBit.Hitmeister.API.Class1
-  fullName: BreakingBit.Hitmeister.API.Class1
-  nameWithType: Class1
-- uid: BreakingBit.Hitmeister.API.Class1.ImNotTested
-  name: ImNotTested()
-  href: api/BreakingBit.Hitmeister.API.Class1.html#BreakingBit_Hitmeister_API_Class1_ImNotTested
-  commentId: M:BreakingBit.Hitmeister.API.Class1.ImNotTested
-  fullName: BreakingBit.Hitmeister.API.Class1.ImNotTested()
-  nameWithType: Class1.ImNotTested()
-- uid: BreakingBit.Hitmeister.API.Class1.ImNotTested*
-  name: ImNotTested
-  href: api/BreakingBit.Hitmeister.API.Class1.html#BreakingBit_Hitmeister_API_Class1_ImNotTested_
-  commentId: Overload:BreakingBit.Hitmeister.API.Class1.ImNotTested
-  fullName: BreakingBit.Hitmeister.API.Class1.ImNotTested
-  nameWithType: Class1.ImNotTested
-- uid: BreakingBit.Hitmeister.Core
-  name: BreakingBit.Hitmeister.Core
-  href: api/BreakingBit.Hitmeister.Core.html
-  commentId: N:BreakingBit.Hitmeister.Core
-  fullName: BreakingBit.Hitmeister.Core
-  nameWithType: BreakingBit.Hitmeister.Core
-- uid: BreakingBit.Hitmeister.Core.Class1
-  name: Class1
-  href: api/BreakingBit.Hitmeister.Core.Class1.html
-  commentId: T:BreakingBit.Hitmeister.Core.Class1
-  fullName: BreakingBit.Hitmeister.Core.Class1
-  nameWithType: Class1
-- uid: BreakingBit.Hitmeister.Core.Class1.TestInt
-  name: TestInt
-  href: api/BreakingBit.Hitmeister.Core.Class1.html#BreakingBit_Hitmeister_Core_Class1_TestInt
-  commentId: F:BreakingBit.Hitmeister.Core.Class1.TestInt
-  fullName: BreakingBit.Hitmeister.Core.Class1.TestInt
-  nameWithType: Class1.TestInt
+- uid: BreakingBit.Hitmeister.API.JsonConverters
+  name: BreakingBit.Hitmeister.API.JsonConverters
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.html
+  commentId: N:BreakingBit.Hitmeister.API.JsonConverters
+  fullName: BreakingBit.Hitmeister.API.JsonConverters
+  nameWithType: BreakingBit.Hitmeister.API.JsonConverters
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter
+  name: EANJsonConverter
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html
+  commentId: T:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter
+  nameWithType: EANJsonConverter
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert(System.Type)
+  name: CanConvert(Type)
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_CanConvert_System_Type_
+  commentId: M:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert(System.Type)
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert(System.Type)
+  nameWithType: EANJsonConverter.CanConvert(Type)
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert*
+  name: CanConvert
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_CanConvert_
+  commentId: Overload:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.CanConvert
+  nameWithType: EANJsonConverter.CanConvert
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_
+  commentId: M:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
+  nameWithType: EANJsonConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson*
+  name: ReadJson
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_ReadJson_
+  commentId: Overload:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.ReadJson
+  nameWithType: EANJsonConverter.ReadJson
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  name: WriteJson(JsonWriter, Object, JsonSerializer)
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer_
+  commentId: M:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
+  nameWithType: EANJsonConverter.WriteJson(JsonWriter, Object, JsonSerializer)
+- uid: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson*
+  name: WriteJson
+  href: api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html#BreakingBit_Hitmeister_API_JsonConverters_EANJsonConverter_WriteJson_
+  commentId: Overload:BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson
+  fullName: BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.WriteJson
+  nameWithType: EANJsonConverter.WriteJson
+- uid: BreakingBit.Hitmeister.API.Models
+  name: BreakingBit.Hitmeister.API.Models
+  href: api/BreakingBit.Hitmeister.API.Models.html
+  commentId: N:BreakingBit.Hitmeister.API.Models
+  fullName: BreakingBit.Hitmeister.API.Models
+  nameWithType: BreakingBit.Hitmeister.API.Models
+- uid: BreakingBit.Hitmeister.API.Models.EAN
+  name: EAN
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html
+  commentId: T:BreakingBit.Hitmeister.API.Models.EAN
+  fullName: BreakingBit.Hitmeister.API.Models.EAN
+  nameWithType: EAN
+- uid: BreakingBit.Hitmeister.API.Models.EAN.#ctor(System.UInt64,BreakingBit.Hitmeister.API.Models.EANType)
+  name: EAN(UInt64, EANType)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN__ctor_System_UInt64_BreakingBit_Hitmeister_API_Models_EANType_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.#ctor(System.UInt64,BreakingBit.Hitmeister.API.Models.EANType)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.EAN(System.UInt64, BreakingBit.Hitmeister.API.Models.EANType)
+  nameWithType: EAN.EAN(UInt64, EANType)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.#ctor*
+  name: EAN
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN__ctor_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.#ctor
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.EAN
+  nameWithType: EAN.EAN
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Equals(BreakingBit.Hitmeister.API.Models.EAN)
+  name: Equals(EAN)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Equals_BreakingBit_Hitmeister_API_Models_EAN_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.Equals(BreakingBit.Hitmeister.API.Models.EAN)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Equals(BreakingBit.Hitmeister.API.Models.EAN)
+  nameWithType: EAN.Equals(EAN)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Equals(System.Object)
+  name: Equals(Object)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Equals_System_Object_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.Equals(System.Object)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Equals(System.Object)
+  nameWithType: EAN.Equals(Object)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Equals*
+  name: Equals
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Equals_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.Equals
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Equals
+  nameWithType: EAN.Equals
+- uid: BreakingBit.Hitmeister.API.Models.EAN.GetHashCode
+  name: GetHashCode()
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_GetHashCode
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.GetHashCode
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.GetHashCode()
+  nameWithType: EAN.GetHashCode()
+- uid: BreakingBit.Hitmeister.API.Models.EAN.GetHashCode*
+  name: GetHashCode
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_GetHashCode_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.GetHashCode
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.GetHashCode
+  nameWithType: EAN.GetHashCode
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Number
+  name: Number
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number
+  commentId: P:BreakingBit.Hitmeister.API.Models.EAN.Number
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Number
+  nameWithType: EAN.Number
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Number*
+  name: Number
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.Number
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Number
+  nameWithType: EAN.Number
+- uid: BreakingBit.Hitmeister.API.Models.EAN.op_Equality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)
+  name: Equality(EAN, EAN)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_op_Equality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.op_Equality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Equality(BreakingBit.Hitmeister.API.Models.EAN, BreakingBit.Hitmeister.API.Models.EAN)
+  nameWithType: EAN.Equality(EAN, EAN)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.op_Equality*
+  name: Equality
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_op_Equality_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.op_Equality
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Equality
+  nameWithType: EAN.Equality
+- uid: BreakingBit.Hitmeister.API.Models.EAN.op_Inequality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)
+  name: Inequality(EAN, EAN)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_op_Inequality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.op_Inequality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Inequality(BreakingBit.Hitmeister.API.Models.EAN, BreakingBit.Hitmeister.API.Models.EAN)
+  nameWithType: EAN.Inequality(EAN, EAN)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.op_Inequality*
+  name: Inequality
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_op_Inequality_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.op_Inequality
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Inequality
+  nameWithType: EAN.Inequality
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String)
+  name: Parse(String)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String)
+  nameWithType: EAN.Parse(String)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String,BreakingBit.Hitmeister.API.Models.EANType)
+  name: Parse(String, EANType)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_BreakingBit_Hitmeister_API_Models_EANType_
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String,BreakingBit.Hitmeister.API.Models.EANType)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String, BreakingBit.Hitmeister.API.Models.EANType)
+  nameWithType: EAN.Parse(String, EANType)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Parse*
+  name: Parse
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Parse_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.Parse
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Parse
+  nameWithType: EAN.Parse
+- uid: BreakingBit.Hitmeister.API.Models.EAN.ToString
+  name: ToString()
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_ToString
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.ToString
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.ToString()
+  nameWithType: EAN.ToString()
+- uid: BreakingBit.Hitmeister.API.Models.EAN.ToString*
+  name: ToString
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_ToString_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.ToString
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.ToString
+  nameWithType: EAN.ToString
+- uid: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EAN@)
+  name: TryParse(String, out EAN)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EAN__
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EAN@)
+  name.vb: TryParse(String, ByRef EAN)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String, out BreakingBit.Hitmeister.API.Models.EAN)
+  fullName.vb: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String, ByRef BreakingBit.Hitmeister.API.Models.EAN)
+  nameWithType: EAN.TryParse(String, out EAN)
+  nameWithType.vb: EAN.TryParse(String, ByRef EAN)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EANType,BreakingBit.Hitmeister.API.Models.EAN@)
+  name: TryParse(String, EANType, out EAN)
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EANType_BreakingBit_Hitmeister_API_Models_EAN__
+  commentId: M:BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EANType,BreakingBit.Hitmeister.API.Models.EAN@)
+  name.vb: TryParse(String, EANType, ByRef EAN)
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String, BreakingBit.Hitmeister.API.Models.EANType, out BreakingBit.Hitmeister.API.Models.EAN)
+  fullName.vb: BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String, BreakingBit.Hitmeister.API.Models.EANType, ByRef BreakingBit.Hitmeister.API.Models.EAN)
+  nameWithType: EAN.TryParse(String, EANType, out EAN)
+  nameWithType.vb: EAN.TryParse(String, EANType, ByRef EAN)
+- uid: BreakingBit.Hitmeister.API.Models.EAN.TryParse*
+  name: TryParse
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_TryParse_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.TryParse
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.TryParse
+  nameWithType: EAN.TryParse
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Type
+  name: Type
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Type
+  commentId: P:BreakingBit.Hitmeister.API.Models.EAN.Type
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Type
+  nameWithType: EAN.Type
+- uid: BreakingBit.Hitmeister.API.Models.EAN.Type*
+  name: Type
+  href: api/BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Type_
+  commentId: Overload:BreakingBit.Hitmeister.API.Models.EAN.Type
+  fullName: BreakingBit.Hitmeister.API.Models.EAN.Type
+  nameWithType: EAN.Type
+- uid: BreakingBit.Hitmeister.API.Models.EANType
+  name: EANType
+  href: api/BreakingBit.Hitmeister.API.Models.EANType.html
+  commentId: T:BreakingBit.Hitmeister.API.Models.EANType
+  fullName: BreakingBit.Hitmeister.API.Models.EANType
+  nameWithType: EANType
+- uid: BreakingBit.Hitmeister.API.Models.EANType.GTIN_13
+  name: GTIN_13
+  href: api/BreakingBit.Hitmeister.API.Models.EANType.html#BreakingBit_Hitmeister_API_Models_EANType_GTIN_13
+  commentId: F:BreakingBit.Hitmeister.API.Models.EANType.GTIN_13
+  fullName: BreakingBit.Hitmeister.API.Models.EANType.GTIN_13
+  nameWithType: EANType.GTIN_13
+- uid: BreakingBit.Hitmeister.API.Models.EANType.GTIN_14
+  name: GTIN_14
+  href: api/BreakingBit.Hitmeister.API.Models.EANType.html#BreakingBit_Hitmeister_API_Models_EANType_GTIN_14
+  commentId: F:BreakingBit.Hitmeister.API.Models.EANType.GTIN_14
+  fullName: BreakingBit.Hitmeister.API.Models.EANType.GTIN_14
+  nameWithType: EANType.GTIN_14
+- uid: BreakingBit.Hitmeister.Core.Extensions
+  name: BreakingBit.Hitmeister.Core.Extensions
+  href: api/BreakingBit.Hitmeister.Core.Extensions.html
+  commentId: N:BreakingBit.Hitmeister.Core.Extensions
+  fullName: BreakingBit.Hitmeister.Core.Extensions
+  nameWithType: BreakingBit.Hitmeister.Core.Extensions
+- uid: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions
+  name: NumericExtensions
+  href: api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.html
+  commentId: T:BreakingBit.Hitmeister.Core.Extensions.NumericExtensions
+  fullName: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions
+  nameWithType: NumericExtensions
+- uid: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits(System.UInt64)
+  name: CountDigits(UInt64)
+  href: api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.html#BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_CountDigits_System_UInt64_
+  commentId: M:BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits(System.UInt64)
+  fullName: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits(System.UInt64)
+  nameWithType: NumericExtensions.CountDigits(UInt64)
+- uid: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits*
+  name: CountDigits
+  href: api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.html#BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_CountDigits_
+  commentId: Overload:BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits
+  fullName: BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits
+  nameWithType: NumericExtensions.CountDigits

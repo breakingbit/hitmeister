@@ -5,11 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.Class0.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.Class0.html",
-          "hash": "w0LJiSzBgVFSKi0MTikhtA=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html",
+          "hash": "0Nb5UqCkQiMMD9wkhjz0PQ=="
         }
       },
       "is_incremental": false,
@@ -17,11 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.Class1.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.Class1.html",
-          "hash": "v/XZw65nHZQZRDuXoN3vgg=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.html",
+          "hash": "oQ5CKBVg6qm3n0rL1IvkIA=="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.EAN.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.html",
-          "hash": "InAKpJikBZ0TtCTB5f96tA=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.EAN.html",
+          "hash": "EDdocG7rUxgX6AU9Hj0tZA=="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.Core.Class1.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.EANType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.Core.Class1.html",
-          "hash": "Tlc1e2HtxRywv5FBhlIfGg=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.EANType.html",
+          "hash": "1La+W+iRu1tJJLUHvowYZQ=="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.Core.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.Core.html",
-          "hash": "VR8vCZn5mWUdtByJWAeX7Q=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.html",
+          "hash": "mv8v/ObaKv7xjst3OixIFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.html",
+          "hash": "wyL30xYcAR1jfkEz0OWy1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.Core.Extensions.html",
+          "hash": "KEE6wcbpoZhL/wGxjXCoeA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ayEat6ybGmG3DBax1Xdv5A=="
+          "hash": "E41KX5T262FgPYUcwwo22w=="
         }
       },
       "is_incremental": false,
@@ -144,17 +168,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

@@ -1,0 +1,850 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EAN
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EAN
+   ">
+    <meta name="generator" content="docfx 2.31.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.EAN">
+  
+  
+  <h1 id="BreakingBit_Hitmeister_API_Models_EAN" data-uid="BreakingBit.Hitmeister.API.Models.EAN" class="text-break">Class EAN
+  </h1>
+  <div class="markdown level0 summary"><p>Wrapper for the string based european article number representation</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EAN</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BreakingBit.Hitmeister.API.Models.html">BreakingBit.Hitmeister.API.Models</a></h6>
+  <h6><strong>Assembly</strong>: BreakingBit.Hitmeister.API.dll</h6>
+  <h5 id="BreakingBit_Hitmeister_API_Models_EAN_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof (EANJsonConverter))]
+public sealed class EAN : IEquatable&lt;EAN&gt;</code></pre>
+  </div>
+  <h5 id="BreakingBit_Hitmeister_API_Models_EAN_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The hitmeister api uses a string representation for their article numbers
+prepended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
+uses both norms.</p>
+<p>GTIN-13 and 14 can be converted into each other by adding or discarding
+a leading zero. Thus <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_GetHashCode">GetHashCode()</a> and <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Equals_BreakingBit_Hitmeister_API_Models_EAN_">Equals(EAN)</a>
+does not take the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> into account because they basically
+represent the same article number in different norms if their numeric
+value is the same.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN__ctor_System_UInt64_BreakingBit_Hitmeister_API_Models_EANType_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.%23ctor(System.UInt64%2CBreakingBit.Hitmeister.API.Models.EANType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L49">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN__ctor_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.#ctor*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN__ctor_System_UInt64_BreakingBit_Hitmeister_API_Models_EANType_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.#ctor(System.UInt64,BreakingBit.Hitmeister.API.Models.EANType)">EAN(UInt64, EANType)</h4>
+  <div class="markdown level1 summary"><p>Creates a new article number storing the corresponding type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EAN(ulong articleNumber, EANType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">articleNumber</span></td>
+        <td><p>numeric representation of the article number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the norm this article number conforms to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.OverflowException</span></td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">articleNumber</code> requires more digits than the corresponding
+<a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> can store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Number.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Number%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L31">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Number_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Number*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Number" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Number">Number</h4>
+  <div class="markdown level1 summary"><p>The parsed article number storead as <span class="xref">System.UInt64</span> without prepending zeros.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Number { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Type.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L36">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Type_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Type*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Type" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The underlying GTIN norm this <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> conforms to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EANType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Equals_BreakingBit_Hitmeister_API_Models_EAN_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Equals(BreakingBit.Hitmeister.API.Models.EAN)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L183">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Equals_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Equals*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Equals_BreakingBit_Hitmeister_API_Models_EAN_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Equals(BreakingBit.Hitmeister.API.Models.EAN)">Equals(EAN)</h4>
+  <div class="markdown level1 summary"><p>Checks if both <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a>s have the same <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(EAN other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> to compare to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> properties are equal otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Equals_System_Object_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L173">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Equals_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Equals*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Equals_System_Object_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Overrides the base <span class="xref">System.Object.Equals(System.Object)</span> to compare
+against an object of type <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><span class="xref">System.Object</span> to compare as <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if <code data-dev-comment-type="paramref" class="paramref">obj</code> is an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> and has the
+the same <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_GetHashCode.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L192">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_GetHashCode_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.GetHashCode*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_GetHashCode" data-uid="BreakingBit.Hitmeister.API.Models.EAN.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Overrides <span class="xref">System.Object.GetHashCode()</span> to a <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> based hash code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code representing the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> independent of its <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Type">Type</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L97">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Parse_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Parse*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String)">Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Parses a string to an ean and determines its <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EAN Parse(string articleNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">articleNumber</span></td>
+        <td><p>the string representation of the article number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">articleNumber</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">articleNumber</code> has an invalid format for a unsigned number</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OverflowException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">articleNumber</code> requires more digits than the correpsonding
+<a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> <code data-dev-comment-type="paramref" class="paramref">type</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_BreakingBit_Hitmeister_API_Models_EANType_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String%2CBreakingBit.Hitmeister.API.Models.EANType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L78">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_Parse_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Parse*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_Parse_System_String_BreakingBit_Hitmeister_API_Models_EANType_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.Parse(System.String,BreakingBit.Hitmeister.API.Models.EANType)">Parse(String, EANType)</h4>
+  <div class="markdown level1 summary"><p>Parses a string to an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> with a fixed <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EAN Parse(string articleNumber, EANType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">articleNumber</span></td>
+        <td><p>the string representation of the article number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the corresponding <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> for this article number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">articleNumber</code> has an invalid format for a number</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OverflowException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">articleNumber</code> requires more digits than the correpsonding
+<a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> <code data-dev-comment-type="paramref" class="paramref">type</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_ToString.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L226">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_ToString_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.ToString*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_ToString" data-uid="BreakingBit.Hitmeister.API.Models.EAN.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts the article number to its string representation with leading zeros
+based on its <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Type">Type</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string representation conforming to the underlying norm.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EAN__.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String%2CBreakingBit.Hitmeister.API.Models.EAN%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L148">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_TryParse_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.TryParse*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EAN__" data-uid="BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EAN@)">TryParse(String, out EAN)</h4>
+  <div class="markdown level1 summary"><p>Tries to parse a string to an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> determening the corresponding
+<a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a> by the <code data-dev-comment-type="paramref" class="paramref">articleNumber</code> length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string articleNumber, out EAN ean)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">articleNumber</span></td>
+        <td><p>the string representation of this article number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean</span></td>
+        <td><p>References the parsed <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> if successfull, otherwise null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> could be parse successfully otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EANType_BreakingBit_Hitmeister_API_Models_EAN__.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String%2CBreakingBit.Hitmeister.API.Models.EANType%2CBreakingBit.Hitmeister.API.Models.EAN%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L127">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_TryParse_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.TryParse*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_TryParse_System_String_BreakingBit_Hitmeister_API_Models_EANType_BreakingBit_Hitmeister_API_Models_EAN__" data-uid="BreakingBit.Hitmeister.API.Models.EAN.TryParse(System.String,BreakingBit.Hitmeister.API.Models.EANType,BreakingBit.Hitmeister.API.Models.EAN@)">TryParse(String, EANType, out EAN)</h4>
+  <div class="markdown level1 summary"><p>Tries to parse a string to an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> with a fixed <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string articleNumber, EANType type, out EAN ean)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">articleNumber</span></td>
+        <td><p>the string representation of this article number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>the assumed <a class="xref" href="BreakingBit.Hitmeister.API.Models.EANType.html">EANType</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean</span></td>
+        <td><p>References the parsed <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> if successfull, otherwise null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> could be parse successfully otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_op_Equality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.op_Equality(BreakingBit.Hitmeister.API.Models.EAN%2CBreakingBit.Hitmeister.API.Models.EAN)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L204">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_op_Equality_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.op_Equality*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_op_Equality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.op_Equality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)">Equality(EAN, EAN)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a>s have the same <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(EAN ean1, EAN ean2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean1</span></td>
+        <td><p>The frist <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean2</span></td>
+        <td><p>The second <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> of <code data-dev-comment-type="paramref" class="paramref">ean1</code> is the same as the 
+<see cref="!:Numer"></see> of <code data-dev-comment-type="paramref" class="paramref">ean2</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN_op_Inequality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN.op_Inequality(BreakingBit.Hitmeister.API.Models.EAN%2CBreakingBit.Hitmeister.API.Models.EAN)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L216">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_EAN_op_Inequality_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.op_Inequality*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_EAN_op_Inequality_BreakingBit_Hitmeister_API_Models_EAN_BreakingBit_Hitmeister_API_Models_EAN_" data-uid="BreakingBit.Hitmeister.API.Models.EAN.op_Inequality(BreakingBit.Hitmeister.API.Models.EAN,BreakingBit.Hitmeister.API.Models.EAN)">Inequality(EAN, EAN)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a>s have a different <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(EAN ean1, EAN ean2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean1</span></td>
+        <td><p>The frist <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a></td>
+        <td><span class="parametername">ean2</span></td>
+        <td><p>The second <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html">EAN</a> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the <a class="xref" href="BreakingBit.Hitmeister.API.Models.EAN.html#BreakingBit_Hitmeister_API_Models_EAN_Number">Number</a> of <code data-dev-comment-type="paramref" class="paramref">ean1</code> is different from the
+<see cref="!:Numer"></see> of <code data-dev-comment-type="paramref" class="paramref">ean2</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EAN.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EAN%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EAN.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2017 Michael Herwig<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

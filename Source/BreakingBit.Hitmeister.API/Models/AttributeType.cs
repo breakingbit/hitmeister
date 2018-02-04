@@ -84,7 +84,7 @@ namespace BreakingBit.Hitmeister.API.Models
         Track,
 
         /// <summary>
-        /// A string corresponding to an url, embbeded as a link.
+        /// A string corresponding to an URL, embedded as a link.
         /// </summary>
         [EnumMember(Value = "Url")]
         Url,

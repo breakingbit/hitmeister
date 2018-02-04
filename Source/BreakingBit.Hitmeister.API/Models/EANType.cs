@@ -6,10 +6,12 @@
     /// <remarks>
     /// To obtain the number of digits an <see cref="EanType"/> can store simply
     /// cast it to its implementation type.
-    /// <code>
-    ///     var maximumNumberOfDigits = (uint)EANType.GTIN_13;
-    /// </code>
     /// </remarks>
+    /// <example>
+    /// <code>
+    /// var maximumNumberOfDigits = (uint)EANType.GTIN_13;
+    /// </code>
+    /// </example>
     public enum EanType : uint
     {
         /// <summary>

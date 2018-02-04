@@ -44,7 +44,7 @@ namespace BreakingBit.Hitmeister.API.JsonConverters
         /// <summary>
         /// Writes the JSON representation of the <see cref="Ean"/>.
         /// </summary>
-        /// <param name="writer">The <see cref="JsonWriter"/> t owrite to.</param>
+        /// <param name="writer">The <see cref="JsonWriter"/> to write to.</param>
         /// <param name="value">The <see cref="Ean"/> to serialize.</param>
         /// <param name="serializer">The calling <see cref="JsonSerializer"/></param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

@@ -38,9 +38,9 @@ namespace BreakingBit.Hitmeister.API.Models
         public int CategoryIdentifier { get; set; }
 
         /// <summary>
-        /// Url of the main picture for this item.
+        /// URL of the main picture for this item.
         /// </summary>
-        /// <value>Items main picture url</value>
+        /// <value>Items main picture URL</value>
         [JsonProperty("main_picture", Required = Required.Always)]
         public Uri MainPictureUrl { get; set; }
 
@@ -52,14 +52,14 @@ namespace BreakingBit.Hitmeister.API.Models
         public string Manufacturer { get; set; }
 
         /// <summary>
-        /// URL to the items page in the real online shop.
+        /// URL to the items page in the real on-line shop.
         /// </summary>
         /// <value>Shop URL</value>
         [JsonProperty("url", Required = Required.Always)]
         public Uri ShopUrl { get; set; }
 
         /// <summary>
-        /// Unfortenatley undocumented
+        /// Unfortunate undocumented
         /// </summary>
         [JsonProperty("real_mgb_article_number", Required = Required.Always)]
         public string RealMgbArticleNumber { get; set; }

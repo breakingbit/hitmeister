@@ -6,7 +6,7 @@ using BreakingBit.Hitmeister.Core.Extensions;
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
-    /// Wrapper for the string based european article number representation
+    /// Wrapper for the string based European article number representation
     /// </summary>
     /// <remarks>
     /// The hitmeister api uses a string representation for their article numbers

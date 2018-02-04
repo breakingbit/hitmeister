@@ -8,21 +8,19 @@ using Newtonsoft.Json.Linq;
 namespace BreakingBit.Hitmeister.API.UnitTests.JsonConverters
 {
     [TestClass]
-#pragma warning disable S101 // EAN is an abbreviation
-    public class EANJsonConverterTests
-#pragma warning restore S101 // EAN is an abbreviation
+    public class EanJsonConverterTests
     {
         sealed class TestJsonType
         {
-            public EAN EAN1;
-            public EAN EAN2;
+            public Ean Ean1;
+            public Ean Ean2;
         }
 
         [TestMethod]
-        public void CanConvertOnlyEAN()
+        public void CanConvertOnlyEan()
         {
-            var converter = new EANJsonConverter();
-            Assert.IsTrue(converter.CanConvert(typeof(EAN)));
+            var converter = new EanJsonConverter();
+            Assert.IsTrue(converter.CanConvert(typeof(Ean)));
             Assert.IsFalse(converter.CanConvert(typeof(string)));
             Assert.IsFalse(converter.CanConvert(typeof(ulong)));
         }
@@ -31,7 +29,7 @@ namespace BreakingBit.Hitmeister.API.UnitTests.JsonConverters
         public void ReadThrowsFormatExceptionIfTokenIsNotAString()
         {
             Assert.ThrowsException<FormatException>(() =>
-                JsonConvert.DeserializeObject<TestJsonType>("{\"EAN1\": 10}")
+                JsonConvert.DeserializeObject<TestJsonType>("{\"Ean1\": 10}")
             );
         }
 
@@ -40,34 +38,34 @@ namespace BreakingBit.Hitmeister.API.UnitTests.JsonConverters
         {
             var obj = JsonConvert.DeserializeObject<TestJsonType>(
             @"{
-                ""EAN1"": null
+                ""Ean1"": null
             }");
-            Assert.IsNull(obj.EAN1);
-            Assert.IsNull(obj.EAN2);
+            Assert.IsNull(obj.Ean1);
+            Assert.IsNull(obj.Ean2);
         }
 
         [TestMethod]
-        public void ReaderConvertsStringToEAN()
+        public void ReaderConvertsStringToEan()
         {
             var obj = JsonConvert.DeserializeObject<TestJsonType>(
             @"{
-                ""EAN1"": ""0003823918234"",
-                ""EAN2"": ""00008479349200""
+                ""Ean1"": ""0003823918234"",
+                ""Ean2"": ""00008479349200""
             }");
-            Assert.IsNotNull(obj.EAN1);
-            Assert.AreEqual(3823918234Lu, obj.EAN1.Number);
-            Assert.AreEqual(EANType.GTIN_13, obj.EAN1.Type);
+            Assert.IsNotNull(obj.Ean1);
+            Assert.AreEqual(3823918234Lu, obj.Ean1.Number);
+            Assert.AreEqual(EanType.GTIN_13, obj.Ean1.Type);
 
-            Assert.IsNotNull(obj.EAN2);
-            Assert.AreEqual(8479349200Lu, obj.EAN2.Number);
-            Assert.AreEqual(EANType.GTIN_14, obj.EAN2.Type);
+            Assert.IsNotNull(obj.Ean2);
+            Assert.AreEqual(8479349200Lu, obj.Ean2.Number);
+            Assert.AreEqual(EanType.GTIN_14, obj.Ean2.Type);
         }
 
         [TestMethod]
         public void WriteSerializesNullValueToNullToken()
         {
-            var testJson = new TestJsonType { EAN1 = null };
-            var jtoken = JToken.FromObject(testJson)["EAN1"];
+            var testJson = new TestJsonType { Ean1 = null };
+            var jtoken = JToken.FromObject(testJson)["Ean1"];
             Assert.AreEqual(JTokenType.Null, jtoken.Type);
         }
 
@@ -76,18 +74,18 @@ namespace BreakingBit.Hitmeister.API.UnitTests.JsonConverters
         {
             var testJson = new TestJsonType
             {
-                EAN1 = new EAN(451281, EANType.GTIN_13),
-                EAN2 = new EAN(945721, EANType.GTIN_14)
+                Ean1 = new Ean(451281, EanType.GTIN_13),
+                Ean2 = new Ean(945721, EanType.GTIN_14)
             };
             var serializedTestJson = JsonConvert.SerializeObject(testJson);
             var deserializedTestJson = JsonConvert.DeserializeObject<TestJsonType>(serializedTestJson);
             Assert.IsNotNull(deserializedTestJson);
-            Assert.IsNotNull(deserializedTestJson.EAN1);
-            Assert.AreEqual(testJson.EAN1.Number, deserializedTestJson.EAN1.Number);
-            Assert.AreEqual(testJson.EAN1.Type, deserializedTestJson.EAN1.Type);
-            Assert.IsNotNull(deserializedTestJson.EAN2);
-            Assert.AreEqual(testJson.EAN2.Number, deserializedTestJson.EAN2.Number);
-            Assert.AreEqual(testJson.EAN2.Type, deserializedTestJson.EAN2.Type);
+            Assert.IsNotNull(deserializedTestJson.Ean1);
+            Assert.AreEqual(testJson.Ean1.Number, deserializedTestJson.Ean1.Number);
+            Assert.AreEqual(testJson.Ean1.Type, deserializedTestJson.Ean1.Type);
+            Assert.IsNotNull(deserializedTestJson.Ean2);
+            Assert.AreEqual(testJson.Ean2.Number, deserializedTestJson.Ean2.Number);
+            Assert.AreEqual(testJson.Ean2.Type, deserializedTestJson.Ean2.Type);
         }
     }
 }

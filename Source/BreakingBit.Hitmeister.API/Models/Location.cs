@@ -1,10 +1,13 @@
 ﻿using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BreakingBit.Hitmeister.API.Models
 {
     ///<summary>
     /// A country or region with ISO 3166-2 code values.
     ///</summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Location
     {
         /// <summary>

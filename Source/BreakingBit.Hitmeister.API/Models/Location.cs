@@ -1,1510 +1,1510 @@
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace BreakingBit.Hitmeister.API.Models
 {
     ///<summary>
-    /// A country or region with ISO 3166-2 codec values.
+    /// A country or region with ISO 3166-2 code values.
     ///</summary>
     public enum Location
     {
-        [EnumMember(Value = "AD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Andorra.
+        /// The ISO 3166-2 code for the country Andorra.
         /// </summary>
+        [EnumMember(Value = "AD")]
         Andorra,
 
-        [EnumMember(Value = "AE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country United Arab Emirates.
+        /// The ISO 3166-2 code for the country United Arab Emirates.
         /// </summary>
+        [EnumMember(Value = "AE")]
         UnitedArabEmirates,
 
-        [EnumMember(Value = "AF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Afghanistan.
+        /// The ISO 3166-2 code for the country Afghanistan.
         /// </summary>
+        [EnumMember(Value = "AF")]
         Afghanistan,
 
-        [EnumMember(Value = "AG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Antigua and Barbuda.
+        /// The ISO 3166-2 code for the country Antigua and Barbuda.
         /// </summary>
+        [EnumMember(Value = "AG")]
         AntiguaandBarbuda,
 
-        [EnumMember(Value = "AI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Anguilla.
+        /// The ISO 3166-2 code for the country Anguilla.
         /// </summary>
+        [EnumMember(Value = "AI")]
         Anguilla,
 
-        [EnumMember(Value = "AL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Albania.
+        /// The ISO 3166-2 code for the country Albania.
         /// </summary>
+        [EnumMember(Value = "AL")]
         Albania,
 
-        [EnumMember(Value = "AM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Armenia.
+        /// The ISO 3166-2 code for the country Armenia.
         /// </summary>
+        [EnumMember(Value = "AM")]
         Armenia,
 
-        [EnumMember(Value = "AN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Netherlands Antilles.
+        /// The ISO 3166-2 code for the country Netherlands Antilles.
         /// </summary>
+        [EnumMember(Value = "AN")]
         NetherlandsAntilles,
 
-        [EnumMember(Value = "AO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Angola.
+        /// The ISO 3166-2 code for the country Angola.
         /// </summary>
+        [EnumMember(Value = "AO")]
         Angola,
 
-        [EnumMember(Value = "AQ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Antarctica.
+        /// The ISO 3166-2 code for the country Antarctica.
         /// </summary>
+        [EnumMember(Value = "AQ")]
         Antarctica,
 
-        [EnumMember(Value = "AR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Argentina.
+        /// The ISO 3166-2 code for the country Argentina.
         /// </summary>
+        [EnumMember(Value = "AR")]
         Argentina,
 
-        [EnumMember(Value = "AS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country American Samoa.
+        /// The ISO 3166-2 code for the country American Samoa.
         /// </summary>
+        [EnumMember(Value = "AS")]
         AmericanSamoa,
 
-        [EnumMember(Value = "AT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Austria.
+        /// The ISO 3166-2 code for the country Austria.
         /// </summary>
+        [EnumMember(Value = "AT")]
         Austria,
 
-        [EnumMember(Value = "AU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Australia.
+        /// The ISO 3166-2 code for the country Australia.
         /// </summary>
+        [EnumMember(Value = "AU")]
         Australia,
 
-        [EnumMember(Value = "AW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Aruba.
+        /// The ISO 3166-2 code for the country Aruba.
         /// </summary>
+        [EnumMember(Value = "AW")]
         Aruba,
 
+        /// <summary>
+        /// The ISO 3166-2 code for the country Åland Islands.
+        /// </summary>
         [EnumMember(Value = "AX")]
-        /// <summary>
-        /// The ISO 3166-2 codec for the country Åland Islands.
-        /// </summary>
-        ÅlandIslands,
+        AlandIslands,
 
-        [EnumMember(Value = "AZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Azerbaijan.
+        /// The ISO 3166-2 code for the country Azerbaijan.
         /// </summary>
+        [EnumMember(Value = "AZ")]
         Azerbaijan,
 
-        [EnumMember(Value = "BA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bosnia and Herzegovina.
+        /// The ISO 3166-2 code for the country Bosnia and Herzegovina.
         /// </summary>
+        [EnumMember(Value = "BA")]
         BosniaandHerzegovina,
 
-        [EnumMember(Value = "BB")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Barbados.
+        /// The ISO 3166-2 code for the country Barbados.
         /// </summary>
+        [EnumMember(Value = "BB")]
         Barbados,
 
-        [EnumMember(Value = "BD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bangladesh.
+        /// The ISO 3166-2 code for the country Bangladesh.
         /// </summary>
+        [EnumMember(Value = "BD")]
         Bangladesh,
 
-        [EnumMember(Value = "BE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Belgium.
+        /// The ISO 3166-2 code for the country Belgium.
         /// </summary>
+        [EnumMember(Value = "BE")]
         Belgium,
 
-        [EnumMember(Value = "BF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Burkina Faso.
+        /// The ISO 3166-2 code for the country Burkina Faso.
         /// </summary>
+        [EnumMember(Value = "BF")]
         BurkinaFaso,
 
-        [EnumMember(Value = "BG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bulgaria.
+        /// The ISO 3166-2 code for the country Bulgaria.
         /// </summary>
+        [EnumMember(Value = "BG")]
         Bulgaria,
 
-        [EnumMember(Value = "BH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bahrain.
+        /// The ISO 3166-2 code for the country Bahrain.
         /// </summary>
+        [EnumMember(Value = "BH")]
         Bahrain,
 
-        [EnumMember(Value = "BI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Burundi.
+        /// The ISO 3166-2 code for the country Burundi.
         /// </summary>
+        [EnumMember(Value = "BI")]
         Burundi,
 
-        [EnumMember(Value = "BJ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Benin.
+        /// The ISO 3166-2 code for the country Benin.
         /// </summary>
+        [EnumMember(Value = "BJ")]
         Benin,
 
-        [EnumMember(Value = "BM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bermuda.
+        /// The ISO 3166-2 code for the country Bermuda.
         /// </summary>
+        [EnumMember(Value = "BM")]
         Bermuda,
 
-        [EnumMember(Value = "BN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Brunei.
+        /// The ISO 3166-2 code for the country Brunei.
         /// </summary>
+        [EnumMember(Value = "BN")]
         Brunei,
 
-        [EnumMember(Value = "BO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bolivia.
+        /// The ISO 3166-2 code for the country Bolivia.
         /// </summary>
+        [EnumMember(Value = "BO")]
         Bolivia,
 
-        [EnumMember(Value = "BQ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bonaire, Sint Eustatius and Saba.
+        /// The ISO 3166-2 code for the country Bonaire, Sint Eustatius and Saba.
         /// </summary>
+        [EnumMember(Value = "BQ")]
         BonaireSintEustatiusandSaba,
 
-        [EnumMember(Value = "BR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Brazil.
+        /// The ISO 3166-2 code for the country Brazil.
         /// </summary>
+        [EnumMember(Value = "BR")]
         Brazil,
 
-        [EnumMember(Value = "BS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bahamas.
+        /// The ISO 3166-2 code for the country Bahamas.
         /// </summary>
+        [EnumMember(Value = "BS")]
         Bahamas,
 
-        [EnumMember(Value = "BT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bhutan.
+        /// The ISO 3166-2 code for the country Bhutan.
         /// </summary>
+        [EnumMember(Value = "BT")]
         Bhutan,
 
-        [EnumMember(Value = "BV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Bouvet Island.
+        /// The ISO 3166-2 code for the country Bouvet Island.
         /// </summary>
+        [EnumMember(Value = "BV")]
         BouvetIsland,
 
-        [EnumMember(Value = "BW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Botswana.
+        /// The ISO 3166-2 code for the country Botswana.
         /// </summary>
+        [EnumMember(Value = "BW")]
         Botswana,
 
-        [EnumMember(Value = "BY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Belarus.
+        /// The ISO 3166-2 code for the country Belarus.
         /// </summary>
+        [EnumMember(Value = "BY")]
         Belarus,
 
-        [EnumMember(Value = "BZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Belize.
+        /// The ISO 3166-2 code for the country Belize.
         /// </summary>
+        [EnumMember(Value = "BZ")]
         Belize,
 
-        [EnumMember(Value = "CA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Canada.
+        /// The ISO 3166-2 code for the country Canada.
         /// </summary>
+        [EnumMember(Value = "CA")]
         Canada,
 
-        [EnumMember(Value = "CC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cocos (Keeling) Islands.
+        /// The ISO 3166-2 code for the country Cocos (Keeling) Islands.
         /// </summary>
+        [EnumMember(Value = "CC")]
         CocosKeelingIslands,
 
-        [EnumMember(Value = "CD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Congo (DRC).
+        /// The ISO 3166-2 code for the country Congo (DRC).
         /// </summary>
+        [EnumMember(Value = "CD")]
         CongoDRC,
 
-        [EnumMember(Value = "CF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Central African Republic.
+        /// The ISO 3166-2 code for the country Central African Republic.
         /// </summary>
+        [EnumMember(Value = "CF")]
         CentralAfricanRepublic,
 
-        [EnumMember(Value = "CG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Congo.
+        /// The ISO 3166-2 code for the country Congo.
         /// </summary>
+        [EnumMember(Value = "CG")]
         Congo,
 
-        [EnumMember(Value = "CH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Switzerland.
+        /// The ISO 3166-2 code for the country Switzerland.
         /// </summary>
+        [EnumMember(Value = "CH")]
         Switzerland,
 
-        [EnumMember(Value = "CI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Côte d’Ivoire.
+        /// The ISO 3166-2 code for the country Côte d’Ivoire.
         /// </summary>
+        [EnumMember(Value = "CI")]
         CotedIvoire,
 
-        [EnumMember(Value = "CK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cook Islands.
+        /// The ISO 3166-2 code for the country Cook Islands.
         /// </summary>
+        [EnumMember(Value = "CK")]
         CookIslands,
 
-        [EnumMember(Value = "CL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Chile.
+        /// The ISO 3166-2 code for the country Chile.
         /// </summary>
+        [EnumMember(Value = "CL")]
         Chile,
 
-        [EnumMember(Value = "CM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cameroon.
+        /// The ISO 3166-2 code for the country Cameroon.
         /// </summary>
+        [EnumMember(Value = "CM")]
         Cameroon,
 
-        [EnumMember(Value = "CN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country China.
+        /// The ISO 3166-2 code for the country China.
         /// </summary>
+        [EnumMember(Value = "CN")]
         China,
 
-        [EnumMember(Value = "CO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Colombia.
+        /// The ISO 3166-2 code for the country Colombia.
         /// </summary>
+        [EnumMember(Value = "CO")]
         Colombia,
 
-        [EnumMember(Value = "CR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Costa Rica.
+        /// The ISO 3166-2 code for the country Costa Rica.
         /// </summary>
+        [EnumMember(Value = "CR")]
         CostaRica,
 
-        [EnumMember(Value = "CU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cuba.
+        /// The ISO 3166-2 code for the country Cuba.
         /// </summary>
+        [EnumMember(Value = "CU")]
         Cuba,
 
-        [EnumMember(Value = "CV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cabo Verde.
+        /// The ISO 3166-2 code for the country Cabo Verde.
         /// </summary>
+        [EnumMember(Value = "CV")]
         CaboVerde,
 
+        /// <summary>
+        /// The ISO 3166-2 code for the country Curaçao.
+        /// </summary>
         [EnumMember(Value = "CW")]
-        /// <summary>
-        /// The ISO 3166-2 codec for the country Curaçao.
-        /// </summary>
-        Curaçao,
+        Curacao,
 
-        [EnumMember(Value = "CX")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Christmas Island.
+        /// The ISO 3166-2 code for the country Christmas Island.
         /// </summary>
+        [EnumMember(Value = "CX")]
         ChristmasIsland,
 
-        [EnumMember(Value = "CY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cyprus.
+        /// The ISO 3166-2 code for the country Cyprus.
         /// </summary>
+        [EnumMember(Value = "CY")]
         Cyprus,
 
-        [EnumMember(Value = "CZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Czech Republic.
+        /// The ISO 3166-2 code for the country Czech Republic.
         /// </summary>
+        [EnumMember(Value = "CZ")]
         CzechRepublic,
 
-        [EnumMember(Value = "DE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Germany.
+        /// The ISO 3166-2 code for the country Germany.
         /// </summary>
+        [EnumMember(Value = "DE")]
         Germany,
 
-        [EnumMember(Value = "DJ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Djibouti.
+        /// The ISO 3166-2 code for the country Djibouti.
         /// </summary>
+        [EnumMember(Value = "DJ")]
         Djibouti,
 
-        [EnumMember(Value = "DK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Denmark.
+        /// The ISO 3166-2 code for the country Denmark.
         /// </summary>
+        [EnumMember(Value = "DK")]
         Denmark,
 
-        [EnumMember(Value = "DM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Dominica.
+        /// The ISO 3166-2 code for the country Dominica.
         /// </summary>
+        [EnumMember(Value = "DM")]
         Dominica,
 
-        [EnumMember(Value = "DO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Dominican Republic.
+        /// The ISO 3166-2 code for the country Dominican Republic.
         /// </summary>
+        [EnumMember(Value = "DO")]
         DominicanRepublic,
 
-        [EnumMember(Value = "DZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Algeria.
+        /// The ISO 3166-2 code for the country Algeria.
         /// </summary>
+        [EnumMember(Value = "DZ")]
         Algeria,
 
-        [EnumMember(Value = "EC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Ecuador.
+        /// The ISO 3166-2 code for the country Ecuador.
         /// </summary>
+        [EnumMember(Value = "EC")]
         Ecuador,
 
-        [EnumMember(Value = "EE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Estonia.
+        /// The ISO 3166-2 code for the country Estonia.
         /// </summary>
+        [EnumMember(Value = "EE")]
         Estonia,
 
-        [EnumMember(Value = "EG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Egypt.
+        /// The ISO 3166-2 code for the country Egypt.
         /// </summary>
+        [EnumMember(Value = "EG")]
         Egypt,
 
-        [EnumMember(Value = "EH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Western Sahara.
+        /// The ISO 3166-2 code for the country Western Sahara.
         /// </summary>
+        [EnumMember(Value = "EH")]
         WesternSahara,
 
-        [EnumMember(Value = "ER")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Eritrea.
+        /// The ISO 3166-2 code for the country Eritrea.
         /// </summary>
+        [EnumMember(Value = "ER")]
         Eritrea,
 
-        [EnumMember(Value = "ES")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Spain.
+        /// The ISO 3166-2 code for the country Spain.
         /// </summary>
+        [EnumMember(Value = "ES")]
         Spain,
 
-        [EnumMember(Value = "ET")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Ethiopia.
+        /// The ISO 3166-2 code for the country Ethiopia.
         /// </summary>
+        [EnumMember(Value = "ET")]
         Ethiopia,
 
-        [EnumMember(Value = "FI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Finland.
+        /// The ISO 3166-2 code for the country Finland.
         /// </summary>
+        [EnumMember(Value = "FI")]
         Finland,
 
-        [EnumMember(Value = "FJ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Fiji.
+        /// The ISO 3166-2 code for the country Fiji.
         /// </summary>
+        [EnumMember(Value = "FJ")]
         Fiji,
 
-        [EnumMember(Value = "FK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Falkland Islands.
+        /// The ISO 3166-2 code for the country Falkland Islands.
         /// </summary>
+        [EnumMember(Value = "FK")]
         FalklandIslands,
 
-        [EnumMember(Value = "FM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Micronesia.
+        /// The ISO 3166-2 code for the country Micronesia.
         /// </summary>
+        [EnumMember(Value = "FM")]
         Micronesia,
 
-        [EnumMember(Value = "FO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Faroe Islands.
+        /// The ISO 3166-2 code for the country Faroe Islands.
         /// </summary>
+        [EnumMember(Value = "FO")]
         FaroeIslands,
 
-        [EnumMember(Value = "FR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country France.
+        /// The ISO 3166-2 code for the country France.
         /// </summary>
+        [EnumMember(Value = "FR")]
         France,
 
-        [EnumMember(Value = "GA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Gabon.
+        /// The ISO 3166-2 code for the country Gabon.
         /// </summary>
+        [EnumMember(Value = "GA")]
         Gabon,
 
-        [EnumMember(Value = "GB")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country United Kingdom.
+        /// The ISO 3166-2 code for the country United Kingdom.
         /// </summary>
+        [EnumMember(Value = "GB")]
         GreatBritian,
 
-        [EnumMember(Value = "GD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Grenada.
+        /// The ISO 3166-2 code for the country Grenada.
         /// </summary>
+        [EnumMember(Value = "GD")]
         Grenada,
 
-        [EnumMember(Value = "GE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Georgia.
+        /// The ISO 3166-2 code for the country Georgia.
         /// </summary>
+        [EnumMember(Value = "GE")]
         Georgia,
 
-        [EnumMember(Value = "GF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country French Guiana.
+        /// The ISO 3166-2 code for the country French Guiana.
         /// </summary>
+        [EnumMember(Value = "GF")]
         FrenchGuiana,
 
-        [EnumMember(Value = "GG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guernsey.
+        /// The ISO 3166-2 code for the country Guernsey.
         /// </summary>
+        [EnumMember(Value = "GG")]
         Guernsey,
 
-        [EnumMember(Value = "GH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Ghana.
+        /// The ISO 3166-2 code for the country Ghana.
         /// </summary>
+        [EnumMember(Value = "GH")]
         Ghana,
 
-        [EnumMember(Value = "GI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Gibraltar.
+        /// The ISO 3166-2 code for the country Gibraltar.
         /// </summary>
+        [EnumMember(Value = "GI")]
         Gibraltar,
 
-        [EnumMember(Value = "GL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Greenland.
+        /// The ISO 3166-2 code for the country Greenland.
         /// </summary>
+        [EnumMember(Value = "GL")]
         Greenland,
 
-        [EnumMember(Value = "GM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Gambia.
+        /// The ISO 3166-2 code for the country Gambia.
         /// </summary>
+        [EnumMember(Value = "GM")]
         Gambia,
 
-        [EnumMember(Value = "GN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guinea.
+        /// The ISO 3166-2 code for the country Guinea.
         /// </summary>
+        [EnumMember(Value = "GN")]
         Guinea,
 
-        [EnumMember(Value = "GP")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guadeloupe.
+        /// The ISO 3166-2 code for the country Guadeloupe.
         /// </summary>
+        [EnumMember(Value = "GP")]
         Guadeloupe,
 
-        [EnumMember(Value = "GQ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Equatorial Guinea.
+        /// The ISO 3166-2 code for the country Equatorial Guinea.
         /// </summary>
+        [EnumMember(Value = "GQ")]
         EquatorialGuinea,
 
-        [EnumMember(Value = "GR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Greece.
+        /// The ISO 3166-2 code for the country Greece.
         /// </summary>
+        [EnumMember(Value = "GR")]
         Greece,
 
-        [EnumMember(Value = "GS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country South Georgia and the South Sandwich Islands.
+        /// The ISO 3166-2 code for the country South Georgia and the South Sandwich Islands.
         /// </summary>
+        [EnumMember(Value = "GS")]
         SouthGeorgiaAndSouthSandwichIslands,
 
-        [EnumMember(Value = "GT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guatemala.
+        /// The ISO 3166-2 code for the country Guatemala.
         /// </summary>
+        [EnumMember(Value = "GT")]
         Guatemala,
 
-        [EnumMember(Value = "GU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guam.
+        /// The ISO 3166-2 code for the country Guam.
         /// </summary>
+        [EnumMember(Value = "GU")]
         Guam,
 
-        [EnumMember(Value = "GW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guinea-Bissau.
+        /// The ISO 3166-2 code for the country Guinea-Bissau.
         /// </summary>
+        [EnumMember(Value = "GW")]
         GuineaBissau,
 
-        [EnumMember(Value = "GY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Guyana.
+        /// The ISO 3166-2 code for the country Guyana.
         /// </summary>
+        [EnumMember(Value = "GY")]
         Guyana,
 
-        [EnumMember(Value = "HK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Hong Kong SAR.
+        /// The ISO 3166-2 code for the country Hong Kong SAR.
         /// </summary>
+        [EnumMember(Value = "HK")]
         HongKongSAR,
 
+        /// <summary>
+        /// The ISO 3166-2 code for the country Heard Island and McDonald Islands.
+        /// </summary>
         [EnumMember(Value = "HM")]
-        /// <summary>
-        /// The ISO 3166-2 codec for the country Heard Island and McDonald Islands.
-        /// </summary>
-         HeardIslandAndMcDonaldIslands,
+        HeardIslandAndMcDonaldIslands,
 
-        [EnumMember(Value = "HN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Honduras.
+        /// The ISO 3166-2 code for the country Honduras.
         /// </summary>
+        [EnumMember(Value = "HN")]
         Honduras,
 
-        [EnumMember(Value = "HR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Croatia.
+        /// The ISO 3166-2 code for the country Croatia.
         /// </summary>
+        [EnumMember(Value = "HR")]
         Croatia,
 
-        [EnumMember(Value = "HT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Haiti.
+        /// The ISO 3166-2 code for the country Haiti.
         /// </summary>
+        [EnumMember(Value = "HT")]
         Haiti,
 
-        [EnumMember(Value = "HU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Hungary.
+        /// The ISO 3166-2 code for the country Hungary.
         /// </summary>
+        [EnumMember(Value = "HU")]
         Hungary,
 
-        [EnumMember(Value = "ID")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Indonesia.
+        /// The ISO 3166-2 code for the country Indonesia.
         /// </summary>
+        [EnumMember(Value = "ID")]
         Indonesia,
 
-        [EnumMember(Value = "IE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Ireland.
+        /// The ISO 3166-2 code for the country Ireland.
         /// </summary>
+        [EnumMember(Value = "IE")]
         Ireland,
 
-        [EnumMember(Value = "IL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Israel.
+        /// The ISO 3166-2 code for the country Israel.
         /// </summary>
+        [EnumMember(Value = "IL")]
         Israel,
 
-        [EnumMember(Value = "IM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Isle of Man.
+        /// The ISO 3166-2 code for the country Isle of Man.
         /// </summary>
+        [EnumMember(Value = "IM")]
         IsleofMan,
 
-        [EnumMember(Value = "IN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country India.
+        /// The ISO 3166-2 code for the country India.
         /// </summary>
+        [EnumMember(Value = "IN")]
         India,
 
-        [EnumMember(Value = "IO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country British Indian Ocean Territory.
+        /// The ISO 3166-2 code for the country British Indian Ocean Territory.
         /// </summary>
+        [EnumMember(Value = "IO")]
         BritishIndianOceanTerritory,
 
-        [EnumMember(Value = "IQ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Iraq.
+        /// The ISO 3166-2 code for the country Iraq.
         /// </summary>
+        [EnumMember(Value = "IQ")]
         Iraq,
 
-        [EnumMember(Value = "IR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Iran.
+        /// The ISO 3166-2 code for the country Iran.
         /// </summary>
+        [EnumMember(Value = "IR")]
         Iran,
 
-        [EnumMember(Value = "IS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Iceland.
+        /// The ISO 3166-2 code for the country Iceland.
         /// </summary>
+        [EnumMember(Value = "IS")]
         Iceland,
 
-        [EnumMember(Value = "IT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Italy.
+        /// The ISO 3166-2 code for the country Italy.
         /// </summary>
+        [EnumMember(Value = "IT")]
         Italy,
 
-        [EnumMember(Value = "JE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Jersey.
+        /// The ISO 3166-2 code for the country Jersey.
         /// </summary>
+        [EnumMember(Value = "JE")]
         Jersey,
 
-        [EnumMember(Value = "JM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Jamaica.
+        /// The ISO 3166-2 code for the country Jamaica.
         /// </summary>
+        [EnumMember(Value = "JM")]
         Jamaica,
 
-        [EnumMember(Value = "JO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Jordan.
+        /// The ISO 3166-2 code for the country Jordan.
         /// </summary>
+        [EnumMember(Value = "JO")]
         Jordan,
 
-        [EnumMember(Value = "JP")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Japan.
+        /// The ISO 3166-2 code for the country Japan.
         /// </summary>
+        [EnumMember(Value = "JP")]
         Japan,
 
-        [EnumMember(Value = "KE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Kenya.
+        /// The ISO 3166-2 code for the country Kenya.
         /// </summary>
+        [EnumMember(Value = "KE")]
         Kenya,
 
-        [EnumMember(Value = "KG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Kyrgyzstan.
+        /// The ISO 3166-2 code for the country Kyrgyzstan.
         /// </summary>
+        [EnumMember(Value = "KG")]
         Kyrgyzstan,
 
-        [EnumMember(Value = "KH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cambodia.
+        /// The ISO 3166-2 code for the country Cambodia.
         /// </summary>
+        [EnumMember(Value = "KH")]
         Cambodia,
 
-        [EnumMember(Value = "KI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Kiribati.
+        /// The ISO 3166-2 code for the country Kiribati.
         /// </summary>
+        [EnumMember(Value = "KI")]
         Kiribati,
 
-        [EnumMember(Value = "KM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Comoros.
+        /// The ISO 3166-2 code for the country Comoros.
         /// </summary>
+        [EnumMember(Value = "KM")]
         Comoros,
 
-        [EnumMember(Value = "KN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saint Kitts and Nevis.
+        /// The ISO 3166-2 code for the country Saint Kitts and Nevis.
         /// </summary>
+        [EnumMember(Value = "KN")]
         SaintKittsandNevis,
 
-        [EnumMember(Value = "KP")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country North Korea.
+        /// The ISO 3166-2 code for the country North Korea.
         /// </summary>
+        [EnumMember(Value = "KP")]
         NorthKorea,
 
-        [EnumMember(Value = "KR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Korea.
+        /// The ISO 3166-2 code for the country Korea.
         /// </summary>
+        [EnumMember(Value = "KR")]
         Korea,
 
-        [EnumMember(Value = "KW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Kuwait.
+        /// The ISO 3166-2 code for the country Kuwait.
         /// </summary>
+        [EnumMember(Value = "KW")]
         Kuwait,
 
-        [EnumMember(Value = "KY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Cayman Islands.
+        /// The ISO 3166-2 code for the country Cayman Islands.
         /// </summary>
+        [EnumMember(Value = "KY")]
         CaymanIslands,
 
-        [EnumMember(Value = "KZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Kazakhstan.
+        /// The ISO 3166-2 code for the country Kazakhstan.
         /// </summary>
+        [EnumMember(Value = "KZ")]
         Kazakhstan,
 
-        [EnumMember(Value = "LA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Laos.
+        /// The ISO 3166-2 code for the country Laos.
         /// </summary>
+        [EnumMember(Value = "LA")]
         Laos,
 
-        [EnumMember(Value = "LB")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Lebanon.
+        /// The ISO 3166-2 code for the country Lebanon.
         /// </summary>
+        [EnumMember(Value = "LB")]
         Lebanon,
 
-        [EnumMember(Value = "LC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saint Lucia.
+        /// The ISO 3166-2 code for the country Saint Lucia.
         /// </summary>
+        [EnumMember(Value = "LC")]
         SaintLucia,
 
-        [EnumMember(Value = "LI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Liechtenstein.
+        /// The ISO 3166-2 code for the country Liechtenstein.
         /// </summary>
+        [EnumMember(Value = "LI")]
         Liechtenstein,
 
-        [EnumMember(Value = "LK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Sri Lanka.
+        /// The ISO 3166-2 code for the country Sri Lanka.
         /// </summary>
+        [EnumMember(Value = "LK")]
         SriLanka,
 
-        [EnumMember(Value = "LR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Liberia.
+        /// The ISO 3166-2 code for the country Liberia.
         /// </summary>
+        [EnumMember(Value = "LR")]
         Liberia,
 
-        [EnumMember(Value = "LS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Lesotho.
+        /// The ISO 3166-2 code for the country Lesotho.
         /// </summary>
+        [EnumMember(Value = "LS")]
         Lesotho,
 
-        [EnumMember(Value = "LT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Lithuania.
+        /// The ISO 3166-2 code for the country Lithuania.
         /// </summary>
+        [EnumMember(Value = "LT")]
         Lithuania,
 
-        [EnumMember(Value = "LU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Luxembourg.
+        /// The ISO 3166-2 code for the country Luxembourg.
         /// </summary>
+        [EnumMember(Value = "LU")]
         Luxembourg,
 
-        [EnumMember(Value = "LV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Latvia.
+        /// The ISO 3166-2 code for the country Latvia.
         /// </summary>
+        [EnumMember(Value = "LV")]
         Latvia,
 
-        [EnumMember(Value = "LY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Libya.
+        /// The ISO 3166-2 code for the country Libya.
         /// </summary>
+        [EnumMember(Value = "LY")]
         Libya,
 
-        [EnumMember(Value = "MA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Morocco.
+        /// The ISO 3166-2 code for the country Morocco.
         /// </summary>
+        [EnumMember(Value = "MA")]
         Morocco,
 
-        [EnumMember(Value = "MC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Monaco.
+        /// The ISO 3166-2 code for the country Monaco.
         /// </summary>
+        [EnumMember(Value = "MC")]
         Monaco,
 
-        [EnumMember(Value = "MD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Moldova.
+        /// The ISO 3166-2 code for the country Moldova.
         /// </summary>
+        [EnumMember(Value = "MD")]
         Moldova,
 
-        [EnumMember(Value = "ME")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Montenegro.
+        /// The ISO 3166-2 code for the country Montenegro.
         /// </summary>
+        [EnumMember(Value = "ME")]
         Montenegro,
 
-        [EnumMember(Value = "MF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saint Martin.
+        /// The ISO 3166-2 code for the country Saint Martin.
         /// </summary>
+        [EnumMember(Value = "MF")]
         SaintMartin,
 
-        [EnumMember(Value = "MG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Madagascar.
+        /// The ISO 3166-2 code for the country Madagascar.
         /// </summary>
+        [EnumMember(Value = "MG")]
         Madagascar,
 
-        [EnumMember(Value = "MH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Marshall Islands.
+        /// The ISO 3166-2 code for the country Marshall Islands.
         /// </summary>
+        [EnumMember(Value = "MH")]
         MarshallIslands,
 
-        [EnumMember(Value = "MK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Macedonia, FYRO.
+        /// The ISO 3166-2 code for the country Macedonia, FYRO.
         /// </summary>
+        [EnumMember(Value = "MK")]
         MacedoniaFYRO,
 
-        [EnumMember(Value = "ML")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mali.
+        /// The ISO 3166-2 code for the country Mali.
         /// </summary>
+        [EnumMember(Value = "ML")]
         Mali,
 
-        [EnumMember(Value = "MM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Myanmar.
+        /// The ISO 3166-2 code for the country Myanmar.
         /// </summary>
+        [EnumMember(Value = "MM")]
         Myanmar,
 
-        [EnumMember(Value = "MN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mongolia.
+        /// The ISO 3166-2 code for the country Mongolia.
         /// </summary>
+        [EnumMember(Value = "MN")]
         Mongolia,
 
-        [EnumMember(Value = "MO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Macao SAR.
+        /// The ISO 3166-2 code for the country Macao SAR.
         /// </summary>
+        [EnumMember(Value = "MO")]
         MacaoSAR,
 
-        [EnumMember(Value = "MP")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Northern Mariana Islands.
+        /// The ISO 3166-2 code for the country Northern Mariana Islands.
         /// </summary>
+        [EnumMember(Value = "MP")]
         NorthernMarianaIslands,
 
-        [EnumMember(Value = "MQ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Martinique.
+        /// The ISO 3166-2 code for the country Martinique.
         /// </summary>
+        [EnumMember(Value = "MQ")]
         Martinique,
 
-        [EnumMember(Value = "MR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mauritania.
+        /// The ISO 3166-2 code for the country Mauritania.
         /// </summary>
+        [EnumMember(Value = "MR")]
         Mauritania,
 
-        [EnumMember(Value = "MS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Montserrat.
+        /// The ISO 3166-2 code for the country Montserrat.
         /// </summary>
+        [EnumMember(Value = "MS")]
         Montserrat,
 
-        [EnumMember(Value = "MT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Malta.
+        /// The ISO 3166-2 code for the country Malta.
         /// </summary>
+        [EnumMember(Value = "MT")]
         Malta,
 
-        [EnumMember(Value = "MU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mauritius.
+        /// The ISO 3166-2 code for the country Mauritius.
         /// </summary>
+        [EnumMember(Value = "MU")]
         Mauritius,
 
-        [EnumMember(Value = "MV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Maldives.
+        /// The ISO 3166-2 code for the country Maldives.
         /// </summary>
+        [EnumMember(Value = "MV")]
         Maldives,
 
-        [EnumMember(Value = "MW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Malawi.
+        /// The ISO 3166-2 code for the country Malawi.
         /// </summary>
+        [EnumMember(Value = "MW")]
         Malawi,
 
-        [EnumMember(Value = "MX")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mexico.
+        /// The ISO 3166-2 code for the country Mexico.
         /// </summary>
+        [EnumMember(Value = "MX")]
         Mexico,
 
-        [EnumMember(Value = "MY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Malaysia.
+        /// The ISO 3166-2 code for the country Malaysia.
         /// </summary>
+        [EnumMember(Value = "MY")]
         Malaysia,
 
-        [EnumMember(Value = "MZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mozambique.
+        /// The ISO 3166-2 code for the country Mozambique.
         /// </summary>
+        [EnumMember(Value = "MZ")]
         Mozambique,
 
-        [EnumMember(Value = "NA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Namibia.
+        /// The ISO 3166-2 code for the country Namibia.
         /// </summary>
+        [EnumMember(Value = "NA")]
         Namibia,
 
-        [EnumMember(Value = "NC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country New Caledonia.
+        /// The ISO 3166-2 code for the country New Caledonia.
         /// </summary>
+        [EnumMember(Value = "NC")]
         NewCaledonia,
 
-        [EnumMember(Value = "NE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Niger.
+        /// The ISO 3166-2 code for the country Niger.
         /// </summary>
+        [EnumMember(Value = "NE")]
         Niger,
 
-        [EnumMember(Value = "NF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Norfolk Island.
+        /// The ISO 3166-2 code for the country Norfolk Island.
         /// </summary>
+        [EnumMember(Value = "NF")]
         NorfolkIsland,
 
-        [EnumMember(Value = "NG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Nigeria.
+        /// The ISO 3166-2 code for the country Nigeria.
         /// </summary>
+        [EnumMember(Value = "NG")]
         Nigeria,
 
-        [EnumMember(Value = "NI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Nicaragua.
+        /// The ISO 3166-2 code for the country Nicaragua.
         /// </summary>
+        [EnumMember(Value = "NI")]
         Nicaragua,
 
-        [EnumMember(Value = "NL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Netherlands.
+        /// The ISO 3166-2 code for the country Netherlands.
         /// </summary>
+        [EnumMember(Value = "NL")]
         Netherlands,
 
-        [EnumMember(Value = "NO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Norway.
+        /// The ISO 3166-2 code for the country Norway.
         /// </summary>
+        [EnumMember(Value = "NO")]
         Norway,
 
-        [EnumMember(Value = "NP")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Nepal.
+        /// The ISO 3166-2 code for the country Nepal.
         /// </summary>
+        [EnumMember(Value = "NP")]
         Nepal,
 
-        [EnumMember(Value = "NR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Nauru.
+        /// The ISO 3166-2 code for the country Nauru.
         /// </summary>
+        [EnumMember(Value = "NR")]
         Nauru,
 
-        [EnumMember(Value = "NU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Niue.
+        /// The ISO 3166-2 code for the country Niue.
         /// </summary>
+        [EnumMember(Value = "NU")]
         Niue,
 
-        [EnumMember(Value = "NZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country New Zealand.
+        /// The ISO 3166-2 code for the country New Zealand.
         /// </summary>
+        [EnumMember(Value = "NZ")]
         NewZealand,
 
-        [EnumMember(Value = "OM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Oman.
+        /// The ISO 3166-2 code for the country Oman.
         /// </summary>
+        [EnumMember(Value = "OM")]
         Oman,
 
-        [EnumMember(Value = "PA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Panama.
+        /// The ISO 3166-2 code for the country Panama.
         /// </summary>
+        [EnumMember(Value = "PA")]
         Panama,
 
-        [EnumMember(Value = "PE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Peru.
+        /// The ISO 3166-2 code for the country Peru.
         /// </summary>
+        [EnumMember(Value = "PE")]
         Peru,
 
-        [EnumMember(Value = "PF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country French Polynesia.
+        /// The ISO 3166-2 code for the country French Polynesia.
         /// </summary>
+        [EnumMember(Value = "PF")]
         FrenchPolynesia,
 
-        [EnumMember(Value = "PG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Papua New Guinea.
+        /// The ISO 3166-2 code for the country Papua New Guinea.
         /// </summary>
+        [EnumMember(Value = "PG")]
         PapuaNewGuinea,
 
-        [EnumMember(Value = "PH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Philippines.
+        /// The ISO 3166-2 code for the country Philippines.
         /// </summary>
+        [EnumMember(Value = "PH")]
         Philippines,
 
-        [EnumMember(Value = "PK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Pakistan.
+        /// The ISO 3166-2 code for the country Pakistan.
         /// </summary>
+        [EnumMember(Value = "PK")]
         Pakistan,
 
-        [EnumMember(Value = "PL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Poland.
+        /// The ISO 3166-2 code for the country Poland.
         /// </summary>
+        [EnumMember(Value = "PL")]
         Poland,
 
-        [EnumMember(Value = "PM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saint Pierre and Miquelon.
+        /// The ISO 3166-2 code for the country Saint Pierre and Miquelon.
         /// </summary>
+        [EnumMember(Value = "PM")]
         SaintPierreandMiquelon,
 
-        [EnumMember(Value = "PN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Pitcairn Islands.
+        /// The ISO 3166-2 code for the country Pitcairn Islands.
         /// </summary>
+        [EnumMember(Value = "PN")]
         PitcairnIslands,
 
-        [EnumMember(Value = "PR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Puerto Rico.
+        /// The ISO 3166-2 code for the country Puerto Rico.
         /// </summary>
+        [EnumMember(Value = "PR")]
         PuertoRico,
 
-        [EnumMember(Value = "PS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Palestinian Authority.
+        /// The ISO 3166-2 code for the country Palestinian Authority.
         /// </summary>
+        [EnumMember(Value = "PS")]
         PalestinianAuthority,
 
-        [EnumMember(Value = "PT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Portugal.
+        /// The ISO 3166-2 code for the country Portugal.
         /// </summary>
+        [EnumMember(Value = "PT")]
         Portugal,
 
-        [EnumMember(Value = "PW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Palau.
+        /// The ISO 3166-2 code for the country Palau.
         /// </summary>
+        [EnumMember(Value = "PW")]
         Palau,
 
-        [EnumMember(Value = "PY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Paraguay.
+        /// The ISO 3166-2 code for the country Paraguay.
         /// </summary>
+        [EnumMember(Value = "PY")]
         Paraguay,
 
-        [EnumMember(Value = "QA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Qatar.
+        /// The ISO 3166-2 code for the country Qatar.
         /// </summary>
+        [EnumMember(Value = "QA")]
         Qatar,
 
-        [EnumMember(Value = "RE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Réunion.
+        /// The ISO 3166-2 code for the country Réunion.
         /// </summary>
+        [EnumMember(Value = "RE")]
         Réunion,
 
-        [EnumMember(Value = "RO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Romania.
+        /// The ISO 3166-2 code for the country Romania.
         /// </summary>
+        [EnumMember(Value = "RO")]
         Romania,
 
-        [EnumMember(Value = "RS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Serbia.
+        /// The ISO 3166-2 code for the country Serbia.
         /// </summary>
+        [EnumMember(Value = "RS")]
         Serbia,
 
-        [EnumMember(Value = "RU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Russia.
+        /// The ISO 3166-2 code for the country Russia.
         /// </summary>
+        [EnumMember(Value = "RU")]
         Russia,
 
-        [EnumMember(Value = "RW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Rwanda.
+        /// The ISO 3166-2 code for the country Rwanda.
         /// </summary>
+        [EnumMember(Value = "RW")]
         Rwanda,
 
-        [EnumMember(Value = "SA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saudi Arabia.
+        /// The ISO 3166-2 code for the country Saudi Arabia.
         /// </summary>
+        [EnumMember(Value = "SA")]
         SaudiArabia,
 
-        [EnumMember(Value = "SB")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Solomon Islands.
+        /// The ISO 3166-2 code for the country Solomon Islands.
         /// </summary>
+        [EnumMember(Value = "SB")]
         SolomonIslands,
 
-        [EnumMember(Value = "SC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Seychelles.
+        /// The ISO 3166-2 code for the country Seychelles.
         /// </summary>
+        [EnumMember(Value = "SC")]
         Seychelles,
 
-        [EnumMember(Value = "SD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Sudan.
+        /// The ISO 3166-2 code for the country Sudan.
         /// </summary>
+        [EnumMember(Value = "SD")]
         Sudan,
 
-        [EnumMember(Value = "SE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Sweden.
+        /// The ISO 3166-2 code for the country Sweden.
         /// </summary>
+        [EnumMember(Value = "SE")]
         Sweden,
 
-        [EnumMember(Value = "SG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Singapore.
+        /// The ISO 3166-2 code for the country Singapore.
         /// </summary>
+        [EnumMember(Value = "SG")]
         Singapore,
 
-        [EnumMember(Value = "SH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country St Helena, Ascension, Tristan da Cunha.
+        /// The ISO 3166-2 code for the country St Helena, Ascension, Tristan da Cunha.
         /// </summary>
+        [EnumMember(Value = "SH")]
         StHelenaAscensionTristanDaCunha,
 
-        [EnumMember(Value = "SI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Slovenia.
+        /// The ISO 3166-2 code for the country Slovenia.
         /// </summary>
+        [EnumMember(Value = "SI")]
         Slovenia,
 
-        [EnumMember(Value = "SJ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Svalbard and Jan Mayen.
+        /// The ISO 3166-2 code for the country Svalbard and Jan Mayen.
         /// </summary>
+        [EnumMember(Value = "SJ")]
         SvalbardandJanMayen,
 
-        [EnumMember(Value = "SK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Slovakia.
+        /// The ISO 3166-2 code for the country Slovakia.
         /// </summary>
+        [EnumMember(Value = "SK")]
         Slovakia,
 
-        [EnumMember(Value = "SL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Sierra Leone.
+        /// The ISO 3166-2 code for the country Sierra Leone.
         /// </summary>
+        [EnumMember(Value = "SL")]
         SierraLeone,
 
-        [EnumMember(Value = "SM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country San Marino.
+        /// The ISO 3166-2 code for the country San Marino.
         /// </summary>
+        [EnumMember(Value = "SM")]
         SanMarino,
 
-        [EnumMember(Value = "SN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Senegal.
+        /// The ISO 3166-2 code for the country Senegal.
         /// </summary>
+        [EnumMember(Value = "SN")]
         Senegal,
 
-        [EnumMember(Value = "SO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Somalia.
+        /// The ISO 3166-2 code for the country Somalia.
         /// </summary>
+        [EnumMember(Value = "SO")]
         Somalia,
 
-        [EnumMember(Value = "SR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Suriname.
+        /// The ISO 3166-2 code for the country Suriname.
         /// </summary>
+        [EnumMember(Value = "SR")]
         Suriname,
 
-        [EnumMember(Value = "SS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country South Sudan.
+        /// The ISO 3166-2 code for the country South Sudan.
         /// </summary>
+        [EnumMember(Value = "SS")]
         SouthSudan,
 
-        [EnumMember(Value = "ST")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country São Tomé and Príncipe.
+        /// The ISO 3166-2 code for the country São Tomé and Príncipe.
         /// </summary>
+        [EnumMember(Value = "ST")]
         SãoToméandPríncipe,
 
-        [EnumMember(Value = "SU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Soviet Union.
+        /// The ISO 3166-2 code for the country Soviet Union.
         /// </summary>
+        [EnumMember(Value = "SU")]
         SovietUnion,
 
-        [EnumMember(Value = "SV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country El Salvador.
+        /// The ISO 3166-2 code for the country El Salvador.
         /// </summary>
+        [EnumMember(Value = "SV")]
         ElSalvador,
 
-        [EnumMember(Value = "SY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Syria.
+        /// The ISO 3166-2 code for the country Syria.
         /// </summary>
+        [EnumMember(Value = "SY")]
         Syria,
 
-        [EnumMember(Value = "SZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Swaziland.
+        /// The ISO 3166-2 code for the country Swaziland.
         /// </summary>
+        [EnumMember(Value = "SZ")]
         Swaziland,
 
-        [EnumMember(Value = "TC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Turks and Caicos Islands.
+        /// The ISO 3166-2 code for the country Turks and Caicos Islands.
         /// </summary>
+        [EnumMember(Value = "TC")]
         TurksandCaicosIslands,
 
-        [EnumMember(Value = "TD")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Chad.
+        /// The ISO 3166-2 code for the country Chad.
         /// </summary>
+        [EnumMember(Value = "TD")]
         Chad,
 
-        [EnumMember(Value = "TF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country French Southern Territories.
+        /// The ISO 3166-2 code for the country French Southern Territories.
         /// </summary>
+        [EnumMember(Value = "TF")]
         FrenchSouthernTerritories,
 
-        [EnumMember(Value = "TG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Togo.
+        /// The ISO 3166-2 code for the country Togo.
         /// </summary>
+        [EnumMember(Value = "TG")]
         Togo,
 
-        [EnumMember(Value = "TH")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Thailand.
+        /// The ISO 3166-2 code for the country Thailand.
         /// </summary>
+        [EnumMember(Value = "TH")]
         Thailand,
 
-        [EnumMember(Value = "TJ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tajikistan.
+        /// The ISO 3166-2 code for the country Tajikistan.
         /// </summary>
+        [EnumMember(Value = "TJ")]
         Tajikistan,
 
-        [EnumMember(Value = "TK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tokelau.
+        /// The ISO 3166-2 code for the country Tokelau.
         /// </summary>
+        [EnumMember(Value = "TK")]
         Tokelau,
 
-        [EnumMember(Value = "TL")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Timor-Leste.
+        /// The ISO 3166-2 code for the country Timor-Leste.
         /// </summary>
+        [EnumMember(Value = "TL")]
         TimorLeste,
 
-        [EnumMember(Value = "TM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Turkmenistan.
+        /// The ISO 3166-2 code for the country Turkmenistan.
         /// </summary>
+        [EnumMember(Value = "TM")]
         Turkmenistan,
 
-        [EnumMember(Value = "TN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tunisia.
+        /// The ISO 3166-2 code for the country Tunisia.
         /// </summary>
+        [EnumMember(Value = "TN")]
         Tunisia,
 
-        [EnumMember(Value = "TO")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tonga.
+        /// The ISO 3166-2 code for the country Tonga.
         /// </summary>
+        [EnumMember(Value = "TO")]
         Tonga,
 
-        [EnumMember(Value = "TR")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Turkey.
+        /// The ISO 3166-2 code for the country Turkey.
         /// </summary>
+        [EnumMember(Value = "TR")]
         Turkey,
 
-        [EnumMember(Value = "TT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Trinidad and Tobago.
+        /// The ISO 3166-2 code for the country Trinidad and Tobago.
         /// </summary>
+        [EnumMember(Value = "TT")]
         TrinidadandTobago,
 
-        [EnumMember(Value = "TV")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tuvalu.
+        /// The ISO 3166-2 code for the country Tuvalu.
         /// </summary>
+        [EnumMember(Value = "TV")]
         Tuvalu,
 
-        [EnumMember(Value = "TW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Taiwan.
+        /// The ISO 3166-2 code for the country Taiwan.
         /// </summary>
+        [EnumMember(Value = "TW")]
         Taiwan,
 
-        [EnumMember(Value = "TZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Tanzania.
+        /// The ISO 3166-2 code for the country Tanzania.
         /// </summary>
+        [EnumMember(Value = "TZ")]
         Tanzania,
 
-        [EnumMember(Value = "UA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Ukraine.
+        /// The ISO 3166-2 code for the country Ukraine.
         /// </summary>
+        [EnumMember(Value = "UA")]
         Ukraine,
 
-        [EnumMember(Value = "UG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Uganda.
+        /// The ISO 3166-2 code for the country Uganda.
         /// </summary>
+        [EnumMember(Value = "UG")]
         Uganda,
 
-        [EnumMember(Value = "UK")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country United Kingdom.
+        /// The ISO 3166-2 code for the country United Kingdom.
         /// </summary>
+        [EnumMember(Value = "UK")]
         UnitedKingdom,
 
-        [EnumMember(Value = "UM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country U.S. Outlying Islands.
+        /// The ISO 3166-2 code for the country U.S. Outlying Islands.
         /// </summary>
+        [EnumMember(Value = "UM")]
         USOutlyingIslands,
 
-        [EnumMember(Value = "US")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country United States.
+        /// The ISO 3166-2 code for the country United States.
         /// </summary>
+        [EnumMember(Value = "US")]
         UnitedStates,
 
-        [EnumMember(Value = "UY")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Uruguay.
+        /// The ISO 3166-2 code for the country Uruguay.
         /// </summary>
+        [EnumMember(Value = "UY")]
         Uruguay,
 
-        [EnumMember(Value = "UZ")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Uzbekistan.
+        /// The ISO 3166-2 code for the country Uzbekistan.
         /// </summary>
+        [EnumMember(Value = "UZ")]
         Uzbekistan,
 
-        [EnumMember(Value = "VA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Vatican City.
+        /// The ISO 3166-2 code for the country Vatican City.
         /// </summary>
+        [EnumMember(Value = "VA")]
         VaticanCity,
 
-        [EnumMember(Value = "VC")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Saint Vincent and the Grenadines.
+        /// The ISO 3166-2 code for the country Saint Vincent and the Grenadines.
         /// </summary>
+        [EnumMember(Value = "VC")]
         SaintVincentandtheGrenadines,
 
-        [EnumMember(Value = "VE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Venezuela.
+        /// The ISO 3166-2 code for the country Venezuela.
         /// </summary>
+        [EnumMember(Value = "VE")]
         Venezuela,
 
-        [EnumMember(Value = "VG")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country British Virgin Islands.
+        /// The ISO 3166-2 code for the country British Virgin Islands.
         /// </summary>
+        [EnumMember(Value = "VG")]
         BritishVirginIslands,
 
-        [EnumMember(Value = "VI")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country U.S. Virgin Islands.
+        /// The ISO 3166-2 code for the country U.S. Virgin Islands.
         /// </summary>
+        [EnumMember(Value = "VI")]
         USVirginIslands,
 
-        [EnumMember(Value = "VN")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Vietnam.
+        /// The ISO 3166-2 code for the country Vietnam.
         /// </summary>
+        [EnumMember(Value = "VN")]
         Vietnam,
 
-        [EnumMember(Value = "VU")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Vanuatu.
+        /// The ISO 3166-2 code for the country Vanuatu.
         /// </summary>
+        [EnumMember(Value = "VU")]
         Vanuatu,
 
-        [EnumMember(Value = "WF")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Wallis and Futuna.
+        /// The ISO 3166-2 code for the country Wallis and Futuna.
         /// </summary>
+        [EnumMember(Value = "WF")]
         WallisandFutuna,
 
-        [EnumMember(Value = "WS")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Samoa.
+        /// The ISO 3166-2 code for the country Samoa.
         /// </summary>
+        [EnumMember(Value = "WS")]
         Samoa,
 
-        [EnumMember(Value = "YE")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Yemen.
+        /// The ISO 3166-2 code for the country Yemen.
         /// </summary>
+        [EnumMember(Value = "YE")]
         Yemen,
 
-        [EnumMember(Value = "YT")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Mayotte.
+        /// The ISO 3166-2 code for the country Mayotte.
         /// </summary>
+        [EnumMember(Value = "YT")]
         Mayotte,
 
-        [EnumMember(Value = "ZA")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country South Africa.
+        /// The ISO 3166-2 code for the country South Africa.
         /// </summary>
+        [EnumMember(Value = "ZA")]
         SouthAfrica,
 
-        [EnumMember(Value = "ZM")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Zambia.
+        /// The ISO 3166-2 code for the country Zambia.
         /// </summary>
+        [EnumMember(Value = "ZM")]
         Zambia,
 
-        [EnumMember(Value = "ZW")]
         /// <summary>
-        /// The ISO 3166-2 codec for the country Zimbabwe.
+        /// The ISO 3166-2 code for the country Zimbabwe.
         /// </summary>
+        [EnumMember(Value = "ZW")]
         Zimbabwe
     }
 }

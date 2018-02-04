@@ -1397,12 +1397,6 @@ namespace BreakingBit.Hitmeister.API.Models
         Uganda,
 
         /// <summary>
-        /// The ISO 3166-2 code for the country United Kingdom.
-        /// </summary>
-        [EnumMember(Value = "UK")]
-        UnitedKingdom,
-
-        /// <summary>
         /// The ISO 3166-2 code for the country U.S. Outlying Islands.
         /// </summary>
         [EnumMember(Value = "UM")]
@@ -1508,6 +1502,16 @@ namespace BreakingBit.Hitmeister.API.Models
         /// The ISO 3166-2 code for the country Zimbabwe.
         /// </summary>
         [EnumMember(Value = "ZW")]
-        Zimbabwe
+        Zimbabwe,
+
+        // Attention: Equally enum values must all be defined at the end.
+        // Otherwise following values will count from the assigned value 
+        // create multiple overlaps.
+
+        /// <summary>
+        /// The ISO 3166-2 code for the country United Kingdom.
+        /// </summary>
+        [EnumMember(Value = "UK")]
+        UnitedKingdom = GreatBritian
     }
 }

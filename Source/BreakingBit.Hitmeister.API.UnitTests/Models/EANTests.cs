@@ -6,7 +6,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BreakingBit.Hitmeister.API.UnitTests.Models
 {
     [TestClass]
+#pragma warning disable S101 // EAN is an abbreviation
     public class EANTests
+#pragma warning restore S101 // EAN is an abbreviation
     {
         [TestMethod]
         public void ConstructorThrowsOnOverflowException()
@@ -83,8 +85,7 @@ namespace BreakingBit.Hitmeister.API.UnitTests.Models
         [TestMethod]
         public void TryParseReturnsFalseNullOnInvalidValues()
         {
-            var placeholder = new EAN(1, EANType.GTIN_13);
-            var check = EAN.TryParse("not a number", out placeholder);
+            var check = EAN.TryParse("not a number", out var placeholder);
             Assert.IsNull(placeholder);
             Assert.IsFalse(check);
 

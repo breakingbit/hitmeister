@@ -19,7 +19,9 @@ namespace BreakingBit.Hitmeister.API.Models
     /// represent the same article number in different norms if their numeric
     /// value is the same.
     /// </remarks>
-    public class EAN : IEquatable<EAN>
+#pragma warning disable S101 // EAN is an abbreviation
+    public sealed class EAN : IEquatable<EAN>
+#pragma warning restore S101 // EAN is an abbreviation
     {
         #region Properties
         /// <summary>

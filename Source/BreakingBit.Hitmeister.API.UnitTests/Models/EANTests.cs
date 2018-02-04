@@ -108,5 +108,30 @@ namespace BreakingBit.Hitmeister.API.UnitTests.Models
             Assert.IsNotNull(placeholder);
             Assert.IsTrue(check);
         }
+
+        [TestMethod]
+        public void EqualComparisonReturnsFalseOnDifferentTypedObjectsOrNull()
+        {
+            var ean = new EAN(0, EANType.GTIN_13);
+            Assert.IsFalse(ean.Equals(""));
+            Assert.IsFalse(ean.Equals(null));
+        }
+
+        [TestMethod]
+        public void EqualComparisonIgnoresType()
+        {
+            var ean1 = new EAN(938741, EANType.GTIN_13);
+            var ean2 = new EAN(ean1.Number, EANType.GTIN_14);
+            Assert.IsTrue(ean1.Equals(ean2));
+            Assert.IsTrue(ean2.Equals(ean1));
+        }
+
+        [TestMethod]
+        public void HashCodeIgnoresType()
+        {
+            var ean1 = new EAN(938741, EANType.GTIN_13);
+            var ean2 = new EAN(ean1.Number, EANType.GTIN_14);
+            Assert.AreEqual(ean1.GetHashCode(), ean2.GetHashCode());
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BreakingBit.Hitmeister.Core.Extensions;
 
@@ -11,8 +12,14 @@ namespace BreakingBit.Hitmeister.API.Models
     /// The hitmeister api uses a string representation for their article numbers
     /// prepended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
     /// uses both norms.
+    /// 
+    /// GTIN-13 and 14 can be converted into each other by adding or discarding
+    /// a leading zero. Thus <see cref="GetHashCode"/> and <see cref="Equals(EAN)"/>
+    /// does not take the <see cref="EANType"/> into account because they basically
+    /// represent the same article number in different norms if their numeric
+    /// value is the same.
     /// </remarks>
-    public class EAN
+    public class EAN : IEquatable<EAN>
     {
         #region Properties
         /// <summary>
@@ -38,7 +45,7 @@ namespace BreakingBit.Hitmeister.API.Models
         /// </exception>
         public EAN(ulong articleNumber, EANType type)
         {
-            /// Check the maximum number of digits is not exceeded
+            // Check the maximum number of digits is not exceeded
             var maximumNumberOfDigits = (uint)type;
             var numberOfDigits = articleNumber.CountDigits();
             if (numberOfDigits > maximumNumberOfDigits)
@@ -88,6 +95,8 @@ namespace BreakingBit.Hitmeister.API.Models
         {
             if (articleNumber == null)
                 throw new ArgumentNullException(nameof(articleNumber));
+
+            // Search for a corresponding type based on the strings length
             EANType? conformingType = null;
             foreach (var type in Enum.GetValues(typeof(EANType)).Cast<EANType>())
             {
@@ -97,6 +106,8 @@ namespace BreakingBit.Hitmeister.API.Models
                     break;
                 }
             }
+
+
             if (!conformingType.HasValue)
                 throw new FormatException("The provided article number does not conform to a specific norm.");
             else
@@ -144,6 +155,63 @@ namespace BreakingBit.Hitmeister.API.Models
                 return false;
             }
         }
+        #endregion
+
+        #region Comparison
+        /// <summary>
+        /// Overrides the base <see cref="object.Equals(object)"/> to compare
+        /// against an object of type <see cref="EAN"/>.
+        /// </summary>
+        /// <param name="obj"><see cref="object"/> to compare as <see cref="EAN"/></param>
+        /// <returns>
+        ///     true if <paramref name="obj"/> is an <see cref="EAN"/> and has the
+        ///     the same <see cref="Number"/> otherwise false
+        /// </returns>
+        public override bool Equals(object obj) =>
+            Equals(obj as EAN);
+
+        /// <summary>
+        /// Checks if both <see cref="EAN"/>s have the same <see cref="Number"/>
+        /// </summary>
+        /// <param name="other">The <see cref="EAN"/> to compare to</param>
+        /// <returns>
+        ///     True if the <see cref="Number"/> properties are equal otherwise false
+        /// </returns>
+        public bool Equals(EAN other) =>
+            other != null && Number == other.Number;
+
+        /// <summary>
+        /// Overrides <see cref="object.GetHashCode()"/> to a <see cref="Number"/> based hash code
+        /// </summary>
+        /// <returns>
+        ///     A hash code representing the <see cref="Number"/> independent of its <see cref="Type"/>
+        /// </returns>
+        public override int GetHashCode() =>
+            Number.GetHashCode();
+
+        /// <summary>
+        /// Determines whether two <see cref="EAN"/>s have the same <see cref="Number"/> property.
+        /// </summary>
+        /// <param name="ean1">The frist <see cref="EAN"/> to compare.</param>
+        /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
+        /// <returns>
+        /// true if the <see cref="Number"/> of <paramref name="ean1"/> is the same as the 
+        /// <see cref="Numer"/> of <paramref name="ean2"/>
+        /// </returns>
+        public static bool operator ==(EAN ean1, EAN ean2) =>
+            EqualityComparer<EAN>.Default.Equals(ean1, ean2);
+
+        /// <summary>
+        /// Determines whether two <see cref="EAN"/>s have a different <see cref="Number"/> property.
+        /// </summary>
+        /// <param name="ean1">The frist <see cref="EAN"/> to compare.</param>
+        /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
+        /// <returns>
+        /// true if the <see cref="Number"/> of <paramref name="ean1"/> is different from the
+        /// <see cref="Numer"/> of <paramref name="ean2"/>
+        /// </returns>
+        public static bool operator !=(EAN ean1, EAN ean2) =>
+            !(ean1 == ean2);
         #endregion
     }
 }

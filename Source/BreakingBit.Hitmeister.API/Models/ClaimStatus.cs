@@ -1,10 +1,13 @@
 ﻿using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
     /// The current status for a claim.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClaimStatus
     {
         /// <summary>

@@ -1,10 +1,13 @@
 ﻿using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
     /// The reason why a claim was opened.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClaimOpenReason
     {
         /// <summary>

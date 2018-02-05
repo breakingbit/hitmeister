@@ -10,7 +10,7 @@ namespace BreakingBit.Hitmeister.API.Models
     /// </summary>
     /// <remarks>
     /// The hitmeister api uses a string representation for their article numbers
-    /// prepended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
+    /// perpended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
     /// uses both norms.
     /// 
     /// GTIN-13 and 14 can be converted into each other by adding or discarding

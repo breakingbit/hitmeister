@@ -26,16 +26,15 @@ namespace BreakingBit.Hitmeister.API.Models
         public int ClaimIdentifier { get; set; }
 
         /// <summary>
-        /// 
+        /// The Authors online representation
         /// </summary>
-        /// <value></value>
         [JsonProperty("author", Required = Required.Always)]
         public ClaimMessageAuthor Author { get; set; }
 
         /// <summary>
-        /// 
+        /// Message the Author wrote.
         /// </summary>
-        /// <value></value>
+        /// <value>Free text</value>
         [JsonProperty("text", Required = Required.Always)]
         public string Text { get; set; }
 

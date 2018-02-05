@@ -127,6 +127,8 @@ namespace BreakingBit.Hitmeister.API.Models
         /// </summary>
         /// <value>Null if no claim exists</value>
         [JsonProperty("claim", Required = Required.Always)]
+        [Obsolete("Claims are deprecated in favor for Tickets. Please consider querying a" +
+            " OrderUnitWithEmbedded to obtain related Tickets.")]
         public Claim Claim { get; set; }
 
         /// <summary>

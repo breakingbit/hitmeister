@@ -35,7 +35,8 @@ namespace BreakingBit.Hitmeister.API.Models
         Cancelled,
 
         /// <summary>
-        /// TODO: Not documented
+        /// The product has been sent to the customer and the seller received his 
+        /// gross revenue. 
         /// </summary>
         [EnumMember(Value = "sent_and_autopaid")]
         SentAndAutopaid,
@@ -47,7 +48,8 @@ namespace BreakingBit.Hitmeister.API.Models
         Returned,
 
         /// <summary>
-        /// TODO: Not documented
+        /// The customer returned the product and the seller has been charged for
+        /// an automatically label generation.
         /// </summary>
         [EnumMember(Value = "returned_paid")]
         ReturnedPaid

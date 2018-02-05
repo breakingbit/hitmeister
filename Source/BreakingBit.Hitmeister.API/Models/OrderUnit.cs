@@ -12,9 +12,8 @@ namespace BreakingBit.Hitmeister.API.Models
     public class OrderUnit
     {
         /// <summary>
-        /// 
+        /// The current status of an OrderUnit.
         /// </summary>
-        /// <value></value>
         [JsonProperty("status", Required = Required.Always)]
         public OrderUnitStatus Status { get; set; }
 

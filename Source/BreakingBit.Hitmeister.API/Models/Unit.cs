@@ -3,7 +3,7 @@
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
-    /// TODO
+    /// Inventory data for a single item from a single seller.
     /// </summary>
     public class Unit
     {

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum EanType
+    <title>Enum OrderUnitCancelReason
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum EanType
+    <meta name="title" content="Enum OrderUnitCancelReason
    ">
     <meta name="generator" content="docfx 2.31.0.0">
     
@@ -68,27 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.EanType">
+            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.OrderUnitCancelReason">
   
   
-  <h1 id="BreakingBit_Hitmeister_API_Models_EanType" data-uid="BreakingBit.Hitmeister.API.Models.EanType" class="text-break">Enum EanType
+  <h1 id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason" data-uid="BreakingBit.Hitmeister.API.Models.OrderUnitCancelReason" class="text-break">Enum OrderUnitCancelReason
   </h1>
-  <div class="markdown level0 summary"><p>The underlying norm an <a class="xref" href="BreakingBit.Hitmeister.API.Models.Ean.html">Ean</a> conforms to</p>
+  <div class="markdown level0 summary"><p>Encoding of a reason why an order has been canceled</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="BreakingBit.Hitmeister.API.Models.html">BreakingBit.Hitmeister.API.Models</a></h6>
   <h6><strong>Assembly</strong>: BreakingBit.Hitmeister.API.dll</h6>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_syntax">Syntax</h5>
+  <h5 id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum EanType : uint</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof (StringEnumConverter))]
+public enum OrderUnitCancelReason</code></pre>
   </div>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>To obtain the number of digits an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EanType.html">EanType</a> can store simply
-cast it to its implementation type.</p>
-</div>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_examples"><strong>Examples</strong></h5>
-  <pre><code>var maximumNumberOfDigits = (uint)EANType.GTIN_13;</code></pre>
-
   <h3 id="fields">Fields
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -100,13 +94,63 @@ cast it to its implementation type.</p>
     <thead>
     <tbody>
       <tr>
-        <td id="BreakingBit_Hitmeister_API_Models_EanType_GTIN_13">GTIN_13</td>
-        <td><p>A 13 digits long article number</p>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_BuyerCancelled">BuyerCancelled</td>
+        <td><p>The buyer canceled the order.</p>
 </td>
       </tr>
       <tr>
-        <td id="BreakingBit_Hitmeister_API_Models_EanType_GTIN_14">GTIN_14</td>
-        <td><p>A 14 digits long article number</p>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_CustomerExchange">CustomerExchange</td>
+        <td><p>The customer would like to exchange the ordered item for a different one.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_CustomerReturn">CustomerReturn</td>
+        <td><p>Enum CustomerReturn for &quot;CustomerReturn&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_DelayedInventory">DelayedInventory</td>
+        <td><p>The item is not in your inventory and there is a delay in delivery by the supplier.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_GeneralAdjustment">GeneralAdjustment</td>
+        <td><p>If none of the other reasons apply to your situation, use this reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_MerchandiseNotReceived">MerchandiseNotReceived</td>
+        <td><p>The customer says that the item did not arrive due to problems during shipping.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_NoInventory">NoInventory</td>
+        <td><p>The item is not currently in your inventory, for example because you are temporarily or permanently sold out.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_NoReactionBuyer">NoReactionBuyer</td>
+        <td><p>If there is no response by the customer to complete the order.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_ShippingAddressUndeliverable">ShippingAddressUndeliverable</td>
+        <td><p>Could not deliver to the address given by the customer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_UndeliverableRegion">UndeliverableRegion</td>
+        <td><p>If you do not ship to the customers location.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_WrongCatalogData">WrongCatalogData</td>
+        <td><p>The description on the Hitmeister site did not match the item in your inventory.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason_WrongPrice">WrongPrice</td>
+        <td><p>The price on the Hitmeister site was incorrect.</p>
 </td>
       </tr>
     </tbody>
@@ -119,10 +163,10 @@ cast it to its implementation type.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EanType.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EanType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_OrderUnitCancelReason.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.OrderUnitCancelReason%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EANType.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/OrderUnitCancelReason.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

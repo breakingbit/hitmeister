@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum EanType
+    <title>Class ShippingGroup
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum EanType
+    <meta name="title" content="Class ShippingGroup
    ">
     <meta name="generator" content="docfx 2.31.0.0">
     
@@ -68,49 +68,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.EanType">
+            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.ShippingGroup">
   
   
-  <h1 id="BreakingBit_Hitmeister_API_Models_EanType" data-uid="BreakingBit.Hitmeister.API.Models.EanType" class="text-break">Enum EanType
+  <h1 id="BreakingBit_Hitmeister_API_Models_ShippingGroup" data-uid="BreakingBit.Hitmeister.API.Models.ShippingGroup" class="text-break">Class ShippingGroup
   </h1>
-  <div class="markdown level0 summary"><p>The underlying norm an <a class="xref" href="BreakingBit.Hitmeister.API.Models.Ean.html">Ean</a> conforms to</p>
+  <div class="markdown level0 summary"><p>A shipping definition created with the Hitmeister back end.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ShippingGroup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="BreakingBit.Hitmeister.API.Models.html">BreakingBit.Hitmeister.API.Models</a></h6>
   <h6><strong>Assembly</strong>: BreakingBit.Hitmeister.API.dll</h6>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_syntax">Syntax</h5>
+  <h5 id="BreakingBit_Hitmeister_API_Models_ShippingGroup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum EanType : uint</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ShippingGroup</code></pre>
   </div>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>To obtain the number of digits an <a class="xref" href="BreakingBit.Hitmeister.API.Models.EanType.html">EanType</a> can store simply
-cast it to its implementation type.</p>
-</div>
-  <h5 id="BreakingBit_Hitmeister_API_Models_EanType_examples"><strong>Examples</strong></h5>
-  <pre><code>var maximumNumberOfDigits = (uint)EANType.GTIN_13;</code></pre>
-
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_ShippingGroup_Name.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.ShippingGroup.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/ShippingGroup.cs/#L14">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_ShippingGroup_Name_" data-uid="BreakingBit.Hitmeister.API.Models.ShippingGroup.Name*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_ShippingGroup_Name" data-uid="BreakingBit.Hitmeister.API.Models.ShippingGroup.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A unique name for this ShippingGroup given by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;, Required = Required.Always)]
+public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
-    <thead>
+    </thead>
     <tbody>
       <tr>
-        <td id="BreakingBit_Hitmeister_API_Models_EanType_GTIN_13">GTIN_13</td>
-        <td><p>A 13 digits long article number</p>
-</td>
-      </tr>
-      <tr>
-        <td id="BreakingBit_Hitmeister_API_Models_EanType_GTIN_14">GTIN_14</td>
-        <td><p>A 14 digits long article number</p>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Unique user defined identifier</p>
 </td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 </article>
           </div>
           
@@ -119,10 +154,10 @@ cast it to its implementation type.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_EanType.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.EanType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_ShippingGroup.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.ShippingGroup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/EANType.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/ShippingGroup.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -5,11 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EanJsonConverter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EANJsonConverter.html",
-          "hash": "0Nb5UqCkQiMMD9wkhjz0PQ=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.EanJsonConverter.html",
+          "hash": "QXNfS+Cc/MIDXpHCvLgIWw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BreakingBit.Hitmeister.API.JsonConverters.html",
-          "hash": "oQ5CKBVg6qm3n0rL1IvkIA=="
+          "hash": "qcmQDKiMzs4XG5iXj+Y04A=="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.EAN.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Address.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.Models.EAN.html",
-          "hash": "LBGsYLj2jRiE82xKhoAa5g=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Address.html",
+          "hash": "vroAbkuqvR4qq4ZKeGwrMA=="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,779 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.EANType.yml",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Attribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BreakingBit.Hitmeister.API.Models.EANType.html",
-          "hash": "HQzTT9JlHohdIeX2nn5e3g=="
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Attribute.html",
+          "hash": "2WOppWIQyqZif/DXy0rciQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.AttributeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.AttributeType.html",
+          "hash": "vACaWpOYBn1JcEXYFSvTvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Buyer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Buyer.html",
+          "hash": "W7GgzZjKXxzL89CwQegBNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Category.html",
+          "hash": "byDWCNCcjHeIJWcihEYR8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.CategoryWithEmbedded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.CategoryWithEmbedded.html",
+          "hash": "PnR8AkhbQ9Dk7SezfKAy3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Claim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Claim.html",
+          "hash": "vbhDCFnrltMWfL0uE41SHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimFile.html",
+          "hash": "Fyx0N3rDYW0z66r112jmBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessage.html",
+          "hash": "00vKPL2TSQEsN6vAQj/Gdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessageAuthor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessageAuthor.html",
+          "hash": "l6Rx8mxUjnanotHhvLKUYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessageAuthorRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimMessageAuthorRole.html",
+          "hash": "MyxjUZA1+rIo6B7x2iJKyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimOpenReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimOpenReason.html",
+          "hash": "QBgE0Sz4KIQ+EtLQ6typ6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ClaimStatus.html",
+          "hash": "/sTPUVHd51263E4oniscqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.DeliveryTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.DeliveryTime.html",
+          "hash": "69ZYPIH47VsPou8RRferxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Ean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Ean.html",
+          "hash": "buYGv0DUFXHXVQeV/tVuBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.EanType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.EanType.html",
+          "hash": "PVZmUnQwohuI0pwBusze9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Gender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Gender.html",
+          "hash": "gCgh35ktG26X8u1205TCvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFile.html",
+          "hash": "94N/kDa0k+kYq7382t7ZrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFileStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFileStatus.html",
+          "hash": "UxloYW2k5ouiP/ATn0HHxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ImportFileType.html",
+          "hash": "P9XUxfUsNJ+0iW4/fhoe/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Invoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Invoice.html",
+          "hash": "HoiSCDf4muuVB1Mn1XThKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.InvoiceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.InvoiceType.html",
+          "hash": "8oYS0H3RbSyQlZLzemQ32g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Item.html",
+          "hash": "p5vh7zdHKMYSEQmxy0lAtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ItemNotReadyReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ItemNotReadyReason.html",
+          "hash": "X5Hppef9jvAfKRw8VtjvyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ItemWithEmbedded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ItemWithEmbedded.html",
+          "hash": "el5JmY/NIWZeIMyaORKLDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Location.html",
+          "hash": "DW5MTGcW1TooAS/E5RmT/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Order.html",
+          "hash": "ybyC22/9/OjVM7UxcKrb9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderSeller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderSeller.html",
+          "hash": "6uPDP+LDUGbaPvpNWhjIPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnit.html",
+          "hash": "Ji+5MUmgksMmklwKmaKsxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitCancelReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitCancelReason.html",
+          "hash": "LmBWAD/X7DgqwLugf87A5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitStatus.html",
+          "hash": "cH+ugbaXrCEObVTiAkzSng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitWithEmbedded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderUnitWithEmbedded.html",
+          "hash": "o3XdUqBqW85lS5+3z1GnFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderWithEmbedded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.OrderWithEmbedded.html",
+          "hash": "/ZwcewoJ8CZVseoHFZf1uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductData.html",
+          "hash": "qGU/W1zyWbyWv38Neg/izQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatus.html",
+          "hash": "Teb0f6hnv2Uk1YJUCTHYYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatusAttributeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatusAttributeValue.html",
+          "hash": "cFpMKQ6n9zwWaK6bUazwIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatusAttributeValueState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataStatusAttributeValueState.html",
+          "hash": "osddSSsZKxX82yCwQqCoMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataUpdateFailReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataUpdateFailReason.html",
+          "hash": "MCL/qNaXW1B00gfQZM7cNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataUpdateStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ProductDataUpdateStatus.html",
+          "hash": "TpE3zJYvBzDzoOULxi3hKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Report.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Report.html",
+          "hash": "3WzzfghwG6rPcQV4MIcaUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReportParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReportParameter.html",
+          "hash": "qCkgdrarpl+ar+yQq7UQ5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReportStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReportStatus.html",
+          "hash": "gG62hwyrcrHD0Dn2yrtBaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Return.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Return.html",
+          "hash": "6RHXDZwGly3fruZXWKNfgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnReason.html",
+          "hash": "EjYOtN4MQOnFi0jruG6jRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnStatus.html",
+          "hash": "aRl8BfBc3MBtWjLa72X25g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnUnit.html",
+          "hash": "rLXrEuevmSAc79G9N26CIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnUnitStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnUnitStatus.html",
+          "hash": "qrZI8/eDNQWeHmLajG8FiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnWithEmbedded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ReturnWithEmbedded.html",
+          "hash": "6QAxRBzsClJcSLzkm8+UuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Seller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Seller.html",
+          "hash": "nuCL93xD/dM81XQSlA77mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.ShippingGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.ShippingGroup.html",
+          "hash": "B1j9S5bkNfDH5I0FFNyVUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.StatusPing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.StatusPing.html",
+          "hash": "I9HNE7k5pxI1rH9u/xJmVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Subscription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Subscription.html",
+          "hash": "rnIXVoYIv/XcBFCCoqbzkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.SubscriptionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.SubscriptionEvent.html",
+          "hash": "mKQ9CcWgfYRyTQmoZY96dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Ticket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Ticket.html",
+          "hash": "XRzkW15NJ4/HfFUNI9ma2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessage.html",
+          "hash": "/HcbUbf8kKjQNNsHgMwnMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessageAuthor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessageAuthor.html",
+          "hash": "rgiN4UwWrQltozED2rTTDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessageAuthorRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketMessageAuthorRole.html",
+          "hash": "lTnjDaQeRm258+lmCCpQWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketOpenReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketOpenReason.html",
+          "hash": "AEvNkbPF2bAFahgN/EAMOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TicketStatus.html",
+          "hash": "+4iwL4Zeh9gWpLJRpuBnFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.TrackingProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.TrackingProvider.html",
+          "hash": "uAcNVnrOK7JDPj58o53ESQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Unit.html",
+          "hash": "0W7RNZ18NxVfGeoQ3PYaVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitCondition.html",
+          "hash": "+5DTQYAxUpCYa6hTUGdczA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitSeller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitSeller.html",
+          "hash": "om6Y1tWcgkTEWmcXhIgISw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitWithEmbedding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.UnitWithEmbedding.html",
+          "hash": "AkUbPZrGGjjlH9OtILj1iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.Warehouse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.Warehouse.html",
+          "hash": "ecyicUQPQZ7rmT2EvIB7aQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BreakingBit.Hitmeister.API.Models.WarehouseAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BreakingBit.Hitmeister.API.Models.WarehouseAddress.html",
+          "hash": "qZkTJrsIVGAEnyjRsKBeog=="
         }
       },
       "is_incremental": false,
@@ -57,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BreakingBit.Hitmeister.API.Models.html",
-          "hash": "mv8v/ObaKv7xjst3OixIFg=="
+          "hash": "v5JeYn2Ip+9wY+HpIQHBlw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.html",
-          "hash": "mBycCnG1wjXG4FRlJYrI6Q=="
+          "hash": "x4RfxPYE9wGp/pviKAqraQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "E41KX5T262FgPYUcwwo22w=="
+          "hash": "ghXS4FQhEywjcopYw36Yqw=="
         }
       },
       "is_incremental": false,

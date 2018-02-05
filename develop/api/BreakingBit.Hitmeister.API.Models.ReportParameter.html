@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class NumericExtensions
+    <title>Class ReportParameter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class NumericExtensions
+    <meta name="title" content="Class ReportParameter
    ">
     <meta name="generator" content="docfx 2.31.0.0">
     
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.Core.Extensions.NumericExtensions">
+            <article class="content wrap" id="_content" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter">
   
   
-  <h1 id="BreakingBit_Hitmeister_Core_Extensions_NumericExtensions" data-uid="BreakingBit.Hitmeister.Core.Extensions.NumericExtensions" class="text-break">Class NumericExtensions
+  <h1 id="BreakingBit_Hitmeister_API_Models_ReportParameter" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter" class="text-break">Class ReportParameter
   </h1>
-  <div class="markdown level0 summary"><p>Implements extension methods for numeric structs</p>
+  <div class="markdown level0 summary"><p>A string based key-value pair describing a report&apos;s column.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NumericExtensions</span></div>
+    <div class="level1"><span class="xref">ReportParameter</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,49 +105,64 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="BreakingBit.Hitmeister.Core.Extensions.html">BreakingBit.Hitmeister.Core.Extensions</a></h6>
-  <h6><strong>Assembly</strong>: BreakingBit.Hitmeister.Core.dll</h6>
-  <h5 id="BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BreakingBit.Hitmeister.API.Models.html">BreakingBit.Hitmeister.API.Models</a></h6>
+  <h6><strong>Assembly</strong>: BreakingBit.Hitmeister.API.dll</h6>
+  <h5 id="BreakingBit_Hitmeister_API_Models_ReportParameter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class NumericExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ReportParameter</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_CountDigits_System_UInt64_.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_ReportParameter_Name.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.ReportParameter.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.Core/Extensions/NumericExtensions.cs/#L16">View Source</a>
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/ReportParameter.cs/#L13">View Source</a>
   </span>
-  <a id="BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_CountDigits_" data-uid="BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits*"></a>
-  <h4 id="BreakingBit_Hitmeister_Core_Extensions_NumericExtensions_CountDigits_System_UInt64_" data-uid="BreakingBit.Hitmeister.Core.Extensions.NumericExtensions.CountDigits(System.UInt64)">CountDigits(UInt64)</h4>
-  <div class="markdown level1 summary"><p>Counts the number of digits <code data-dev-comment-type="paramref" class="paramref">number</code> required in a decimal system</p>
+  <a id="BreakingBit_Hitmeister_API_Models_ReportParameter_Name_" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter.Name*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_ReportParameter_Name" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Key/Name of the parameter/column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static uint CountDigits(this ulong number)</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;, Required = Required.Always)]
+public string Name { get; set; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td><span class="parametername">number</span></td>
-        <td><p>The number value for counting its digits.</p>
-</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_ReportParameter_Value.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.ReportParameter.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/ReportParameter.cs/#L19">View Source</a>
+  </span>
+  <a id="BreakingBit_Hitmeister_API_Models_ReportParameter_Value_" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter.Value*"></a>
+  <h4 id="BreakingBit_Hitmeister_API_Models_ReportParameter_Value" data-uid="BreakingBit.Hitmeister.API.Models.ReportParameter.Value">Value</h4>
+  <div class="markdown level1 summary"><p>The description of this column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;value&quot;, Required = Required.Always)]
+public string Value { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -157,9 +172,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><p>number of digits required in a decimal system</p>
-</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -171,10 +185,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_Core_Extensions_NumericExtensions.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.Core.Extensions.NumericExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/breakingbit/hitmeister/new/develop/apiSpec/new?filename=BreakingBit_Hitmeister_API_Models_ReportParameter.md&amp;value=---%0Auid%3A%20BreakingBit.Hitmeister.API.Models.ReportParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.Core/Extensions/NumericExtensions.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/breakingbit/hitmeister/blob/develop/Source/BreakingBit.Hitmeister.API/Models/ReportParameter.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

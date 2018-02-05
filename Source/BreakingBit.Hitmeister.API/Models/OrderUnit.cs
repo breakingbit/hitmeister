@@ -22,7 +22,7 @@ namespace BreakingBit.Hitmeister.API.Models
         /// Condition of the sold product.
         /// </summary>
         [JsonProperty("unit_condition", Required = Required.Always)]
-        public OrderUnitCondition Condition { get; set; }
+        public UnitCondition Condition { get; set; }
 
         /// <summary>
         /// The delivery time shown on the shop website.

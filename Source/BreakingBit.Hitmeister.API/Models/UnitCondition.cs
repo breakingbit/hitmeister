@@ -8,7 +8,7 @@ namespace BreakingBit.Hitmeister.API.Models
     /// Encodes the condition of a product.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum OrderUnitCondition
+    public enum UnitCondition
     {
         /// <summary>
         /// The product is new

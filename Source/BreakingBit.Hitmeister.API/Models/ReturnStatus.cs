@@ -5,40 +5,40 @@ using Newtonsoft.Json.Converters;
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
-    /// Encodes the current status of a return.
+    /// Encodes the status of a Return.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ReturnStatus
     {
+        /// <summary>
+        /// The customer has requested to return one or more articles he bought.
+        /// </summary>
+        [EnumMember(Value = "return_requested")]
+        ReturnRequested,
 
         /// <summary>
-        /// The customer has not sent the product back yet.
+        /// The customer has received a return label from the respective shipping provider 
+        /// (e.g DHL). This should usually happen a few moments after the return is requested.
         /// </summary>
-        [EnumMember(Value = "need_to_be_returned")]
-        NeedToBeReturned,
+        [EnumMember(Value = "label_generated")]
+        LabelGenerated,
 
         /// <summary>
-        /// The product sent by the customer has arrived.
+        /// The package was sent (according to the shipping provider).
         /// </summary>
-        [EnumMember(Value = "return_arrived")]
-        ReturnArrived,
+        [EnumMember(Value = "package_sent")]
+        PackageSent,
 
         /// <summary>
-        /// The seller accepted the returned products condition.
+        /// The package was delivered (according to the shipping provider).
         /// </summary>
-        [EnumMember(Value = "return_accepted")]
-        ReturnAccepted,
+        [EnumMember(Value = "package_received")]
+        PackageReceived,
 
         /// <summary>
-        /// The seller rejected the return.
+        /// The generated label has been deleted.
         /// </summary>
-        [EnumMember(Value = "return_rejected")]
-        ReturnRejected,
-
-        /// <summary>
-        /// The return has been completely processed and closed.
-        /// </summary>
-        [EnumMember(Value = "return_closed")]
-        ReturnClosed
+        [EnumMember(Value = "label_deleted")]
+        LabelDeleted
     }
 }

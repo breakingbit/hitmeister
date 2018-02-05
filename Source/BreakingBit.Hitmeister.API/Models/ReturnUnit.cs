@@ -12,7 +12,7 @@ namespace BreakingBit.Hitmeister.API.Models
         /// The current status of the return process.
         /// </summary>
         [JsonProperty("status", Required = Required.Always)]
-        public ReturnStatus Status { get; set; }
+        public ReturnUnitStatus Status { get; set; }
 
         /// <summary>
         /// The reason why the customer initiated a return.

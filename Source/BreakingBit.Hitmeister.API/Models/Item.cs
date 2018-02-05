@@ -7,7 +7,7 @@ namespace BreakingBit.Hitmeister.API.Models
     /// <summary>
     /// The product data for a single product.
     /// </summary>
-    public partial class Item
+    public class Item
     {
         /// <summary>
         /// Internal ID of Item, unique across all Items

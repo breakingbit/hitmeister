@@ -30,14 +30,14 @@ namespace BreakingBit.Hitmeister.API.Models
         public DateTime DateRequested { get; set; }
 
         /// <summary>
-        /// URL to download the report.
+        /// URL to download the CSV report.
         /// </summary>
-        /// <value>Null if not ready</value>
+        /// <value>Null if not ready.</value>
         [JsonProperty("url", Required = Required.AllowNull)]
         public Uri Url { get; set; }
 
         /// <summary>
-        /// A collection of parameters passed to the report generation.
+        /// A collection of column descriptions within the CSV file.
         /// </summary>
         [JsonProperty("params", Required = Required.Always)]
         public List<ReportParameter> Parameters { get; set; }

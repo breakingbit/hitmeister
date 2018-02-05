@@ -3,21 +3,18 @@
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
-    /// A string based key-value pair used as parameter for Report generation.
+    /// A string based key-value pair describing a report's column.
     /// </summary>
     public sealed class ReportParameter
     {
-        // TODO: Ask for a detailed description of possible values.
-        //       Maybe in the back end?
-
         /// <summary>
-        /// Key/Name of the parameter.
+        /// Key/Name of the parameter/column.
         /// </summary>
         [JsonProperty("name", Required = Required.Always)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Value of the parameter
+        /// The description of this column.
         /// </summary>
         [JsonProperty("value", Required = Required.Always)]
         public string Value { get; set; }

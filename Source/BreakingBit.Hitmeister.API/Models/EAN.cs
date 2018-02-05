@@ -6,23 +6,21 @@ using BreakingBit.Hitmeister.Core.Extensions;
 namespace BreakingBit.Hitmeister.API.Models
 {
     /// <summary>
-    /// Wrapper for the string based european article number representation
+    /// Wrapper for the string based European article number representation
     /// </summary>
     /// <remarks>
     /// The hitmeister api uses a string representation for their article numbers
-    /// prepended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
+    /// perpended with zeros. This conforms to the GTIN-13/14 norm. Hitmeister
     /// uses both norms.
     /// 
     /// GTIN-13 and 14 can be converted into each other by adding or discarding
-    /// a leading zero. Thus <see cref="GetHashCode"/> and <see cref="Equals(EAN)"/>
-    /// does not take the <see cref="EANType"/> into account because they basically
+    /// a leading zero. Thus <see cref="GetHashCode"/> and <see cref="Equals(Ean)"/>
+    /// does not take the <see cref="EanType"/> into account because they basically
     /// represent the same article number in different norms if their numeric
     /// value is the same.
     /// </remarks>
-    [Newtonsoft.Json.JsonConverter(typeof(JsonConverters.EANJsonConverter))]
-#pragma warning disable S101 // EAN is an abbreviation
-    public sealed class EAN : IEquatable<EAN>
-#pragma warning restore S101 // EAN is an abbreviation
+    [Newtonsoft.Json.JsonConverter(typeof(JsonConverters.EanJsonConverter))]
+    public sealed class Ean : IEquatable<Ean>
     {
         #region Properties
         /// <summary>
@@ -31,9 +29,9 @@ namespace BreakingBit.Hitmeister.API.Models
         public ulong Number { get; }
 
         /// <summary>
-        /// The underlying GTIN norm this <see cref="EAN"/> conforms to.
+        /// The underlying GTIN norm this <see cref="Ean"/> conforms to.
         /// </summary>
-        public EANType Type { get; }
+        public EanType Type { get; }
         #endregion
 
         #region Constructors
@@ -44,15 +42,15 @@ namespace BreakingBit.Hitmeister.API.Models
         /// <param name="type">the norm this article number conforms to</param>
         /// <exception cref="OverflowException">
         ///     The <paramref name="articleNumber"/> requires more digits than the corresponding
-        ///     <see cref="EANType"/> can store.
+        ///     <see cref="EanType"/> can store.
         /// </exception>
-        public EAN(ulong articleNumber, EANType type)
+        public Ean(ulong articleNumber, EanType type)
         {
             // Check the maximum number of digits is not exceeded
             var maximumNumberOfDigits = (uint)type;
             var numberOfDigits = articleNumber.CountDigits();
             if (numberOfDigits > maximumNumberOfDigits)
-                throw new OverflowException($"An {nameof(EAN)} of type '{type}' cannot have more" +
+                throw new OverflowException($"An {nameof(Ean)} of type '{type}' cannot have more" +
                     $" than {maximumNumberOfDigits} digits.");
 
             // Store properties
@@ -63,26 +61,26 @@ namespace BreakingBit.Hitmeister.API.Models
 
         #region Parsing
         /// <summary>
-        /// Parses a string to an <see cref="EAN"/> with a fixed <see cref="EANType"/>
+        /// Parses a string to an <see cref="Ean"/> with a fixed <see cref="EanType"/>
         /// </summary>
         /// <param name="articleNumber">the string representation of the article number</param>
-        /// <param name="type">the corresponding <see cref="EANType"/> for this article number</param>
+        /// <param name="type">the corresponding <see cref="EanType"/> for this article number</param>
         /// <returns></returns>
         /// <exception cref="FormatException">
         ///     <paramref name="articleNumber"/> has an invalid format for a number
         /// </exception>
         /// <exception cref="OverflowException">
         ///     <paramref name="articleNumber"/> requires more digits than the correpsonding
-        ///     <see cref="EANType"/> <paramref name="type"/>.
+        ///     <see cref="EanType"/> <paramref name="type"/>.
         /// </exception>
-        public static EAN Parse(string articleNumber, EANType type)
+        public static Ean Parse(string articleNumber, EanType type)
         {
             var number = ulong.Parse(articleNumber);
-            return new EAN(number, type);
+            return new Ean(number, type);
         }
 
         /// <summary>
-        /// Parses a string to an ean and determines its <see cref="EANType"/>
+        /// Parses a string to an ean and determines its <see cref="EanType"/>
         /// </summary>
         /// <param name="articleNumber">the string representation of the article number</param>
         /// <returns></returns>
@@ -92,16 +90,16 @@ namespace BreakingBit.Hitmeister.API.Models
         /// </exception>
         /// <exception cref="OverflowException">
         ///     <paramref name="articleNumber"/> requires more digits than the correpsonding
-        ///     <see cref="EANType"/> <paramref name="type"/>.
+        ///     <see cref="EanType"/> <paramref name="type"/>.
         /// </exception>
-        public static EAN Parse(string articleNumber)
+        public static Ean Parse(string articleNumber)
         {
             if (articleNumber == null)
                 throw new ArgumentNullException(nameof(articleNumber));
 
             // Search for a corresponding type based on the strings length
-            EANType? conformingType = null;
-            foreach (var type in Enum.GetValues(typeof(EANType)).Cast<EANType>())
+            EanType? conformingType = null;
+            foreach (var type in Enum.GetValues(typeof(EanType)).Cast<EanType>())
             {
                 if ((uint)type == articleNumber.Length)
                 {
@@ -118,13 +116,13 @@ namespace BreakingBit.Hitmeister.API.Models
         }
 
         /// <summary>
-        /// Tries to parse a string to an <see cref="EAN"/> with a fixed <see cref="EANType"/>
+        /// Tries to parse a string to an <see cref="Ean"/> with a fixed <see cref="EanType"/>
         /// </summary>
         /// <param name="articleNumber">the string representation of this article number</param>
-        /// <param name="type">the assumed <see cref="EANType"/></param>
-        /// <param name="ean">References the parsed <see cref="EAN"/> if successfull, otherwise null</param>
-        /// <returns>True if the <see cref="EAN"/> could be parse successfully otherwise false</returns>
-        public static bool TryParse(string articleNumber, EANType type, out EAN ean)
+        /// <param name="type">the assumed <see cref="EanType"/></param>
+        /// <param name="ean">References the parsed <see cref="Ean"/> if successfull, otherwise null</param>
+        /// <returns>True if the <see cref="Ean"/> could be parse successfully otherwise false</returns>
+        public static bool TryParse(string articleNumber, EanType type, out Ean ean)
         {
             try
             {
@@ -139,13 +137,13 @@ namespace BreakingBit.Hitmeister.API.Models
         }
 
         /// <summary>
-        /// Tries to parse a string to an <see cref="EAN"/> determening the corresponding
-        /// <see cref="EANType"/> by the <paramref name="articleNumber"/> length.
+        /// Tries to parse a string to an <see cref="Ean"/> determening the corresponding
+        /// <see cref="EanType"/> by the <paramref name="articleNumber"/> length.
         /// </summary>
         /// <param name="articleNumber">the string representation of this article number</param>
-        /// <param name="ean">References the parsed <see cref="EAN"/> if successfull, otherwise null</param>
-        /// <returns>True if the <see cref="EAN"/> could be parse successfully otherwise false</returns>
-        public static bool TryParse(string articleNumber, out EAN ean)
+        /// <param name="ean">References the parsed <see cref="Ean"/> if successfull, otherwise null</param>
+        /// <returns>True if the <see cref="Ean"/> could be parse successfully otherwise false</returns>
+        public static bool TryParse(string articleNumber, out Ean ean)
         {
             try
             {
@@ -163,24 +161,24 @@ namespace BreakingBit.Hitmeister.API.Models
         #region Comparison
         /// <summary>
         /// Overrides the base <see cref="object.Equals(object)"/> to compare
-        /// against an object of type <see cref="EAN"/>.
+        /// against an object of type <see cref="Ean"/>.
         /// </summary>
-        /// <param name="obj"><see cref="object"/> to compare as <see cref="EAN"/></param>
+        /// <param name="obj"><see cref="object"/> to compare as <see cref="Ean"/></param>
         /// <returns>
-        ///     true if <paramref name="obj"/> is an <see cref="EAN"/> and has the
+        ///     true if <paramref name="obj"/> is an <see cref="Ean"/> and has the
         ///     the same <see cref="Number"/> otherwise false
         /// </returns>
         public override bool Equals(object obj) =>
-            Equals(obj as EAN);
+            Equals(obj as Ean);
 
         /// <summary>
-        /// Checks if both <see cref="EAN"/>s have the same <see cref="Number"/>
+        /// Checks if both <see cref="Ean"/>s have the same <see cref="Number"/>
         /// </summary>
-        /// <param name="other">The <see cref="EAN"/> to compare to</param>
+        /// <param name="other">The <see cref="Ean"/> to compare to</param>
         /// <returns>
         ///     True if the <see cref="Number"/> properties are equal otherwise false
         /// </returns>
-        public bool Equals(EAN other) =>
+        public bool Equals(Ean other) =>
             other != null && Number == other.Number;
 
         /// <summary>
@@ -193,27 +191,27 @@ namespace BreakingBit.Hitmeister.API.Models
             Number.GetHashCode();
 
         /// <summary>
-        /// Determines whether two <see cref="EAN"/>s have the same <see cref="Number"/> property.
+        /// Determines whether two <see cref="Ean"/>s have the same <see cref="Number"/> property.
         /// </summary>
-        /// <param name="ean1">The frist <see cref="EAN"/> to compare.</param>
-        /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
+        /// <param name="ean1">The frist <see cref="Ean"/> to compare.</param>
+        /// <param name="ean2">The second <see cref="Ean"/> to compare.</param>
         /// <returns>
         /// true if the <see cref="Number"/> of <paramref name="ean1"/> is the same as the 
         /// <see cref="Number"/> of <paramref name="ean2"/>
         /// </returns>
-        public static bool operator ==(EAN ean1, EAN ean2) =>
-            EqualityComparer<EAN>.Default.Equals(ean1, ean2);
+        public static bool operator ==(Ean ean1, Ean ean2) =>
+            EqualityComparer<Ean>.Default.Equals(ean1, ean2);
 
         /// <summary>
-        /// Determines whether two <see cref="EAN"/>s have a different <see cref="Number"/> property.
+        /// Determines whether two <see cref="Ean"/>s have a different <see cref="Number"/> property.
         /// </summary>
-        /// <param name="ean1">The frist <see cref="EAN"/> to compare.</param>
-        /// <param name="ean2">The second <see cref="EAN"/> to compare.</param>
+        /// <param name="ean1">The frist <see cref="Ean"/> to compare.</param>
+        /// <param name="ean2">The second <see cref="Ean"/> to compare.</param>
         /// <returns>
         /// true if the <see cref="Number"/> of <paramref name="ean1"/> is different from the
         /// <see cref="Number"/> of <paramref name="ean2"/>
         /// </returns>
-        public static bool operator !=(EAN ean1, EAN ean2) =>
+        public static bool operator !=(Ean ean1, Ean ean2) =>
             !(ean1 == ean2);
         #endregion
 

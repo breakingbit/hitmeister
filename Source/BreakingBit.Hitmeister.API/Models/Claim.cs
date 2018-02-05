@@ -8,7 +8,9 @@ namespace BreakingBit.Hitmeister.API.Models
     /// </summary>
     /// <remarks>
     /// Once a claim has been opened all parties communicate using ClaimMessages.
-    /// </remarks>
+    [Obsolete("Claims are deprecated in favor for Tickets. Please use tickets in order to be conform with " +
+        "the introduced N-to-N relation between tickets and order units. The claims and claim-messages endpoints " +
+        "will be supported until November 2017.")]
     public class Claim
     {
         /// <summary>

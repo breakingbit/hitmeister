@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -8,6 +9,9 @@ namespace BreakingBit.Hitmeister.API.Models
     /// The current status for a claim.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
+    [Obsolete("Claims are deprecated in favor for Tickets. Please use tickets in order to be conform with " +
+        "the introduced N-to-N relation between tickets and order units. The claims and claim-messages endpoints " +
+        "will be supported until November 2017.")]
     public enum ClaimStatus
     {
         /// <summary>

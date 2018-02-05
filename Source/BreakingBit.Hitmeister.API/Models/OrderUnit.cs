@@ -9,7 +9,7 @@ namespace BreakingBit.Hitmeister.API.Models
     /// <remarks>
     /// When a customer creates an order an OrderUnit is created for every unit you sold.
     /// </remarks>
-    public sealed class OrderUnit
+    public class OrderUnit
     {
         /// <summary>
         /// 
